@@ -1,18 +1,8 @@
-/* 
-    We used the service control example when building our Quest 1 implementation
-    This code allows us to:
-        1.) Reset the clock to 00:00:00
-        2.) Set the time with the format HH:MM
-        3.) Set an alarm with the format HH:MM
-
-    When "make monitor" is executed in the terminal, the user will first need to set the initial time
-        of the clock.
-
-    servo motor control example
-    This example code is in the Public Domain (or CC0 licensed, at your option.)
-    Unless required by applicable law or agreed to in writing, this
-    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-    CONDITIONS OF ANY KIND, either express or implied.
+/* servo motor control example
+   This example code is in the Public Domain (or CC0 licensed, at your option.)
+   Unless required by applicable law or agreed to in writing, this
+   software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+   CONDITIONS OF ANY KIND, either express or implied.
 */
 #include <stdio.h>
 #include <time.h>
@@ -73,6 +63,7 @@ static uint32_t servo_per_degree_init(uint32_t degree_of_rotation)
     return cal_pulsewidth;
 }
 
+
 // Turns the LED on
 void switch_one(void) {
     gpio_set_level(BLINK_GPIO, 1); 
@@ -105,6 +96,8 @@ void led_alarm_flash(void) {
     vTaskDelay(250 / portTICK_PERIOD_MS);
     gpio_set_level(BLINK_GPIO2, 0);
 }
+
+
 
 /**
  * @brief Configure MCPWM module
@@ -146,6 +139,8 @@ void mcpwm_example_servo_control(void *arg)
     int input[4] = {0, 0, 0, 0};
     int len = 0;
     int counter = 0;
+	
+	
     while(counter != 4) {
         // Read data from the UART        
         len = uart_read_bytes(UART_NUM_0, data, BUF_SIZE, 20 / portTICK_RATE_MS);
@@ -183,9 +178,11 @@ void mcpwm_example_servo_control(void *arg)
     
     printf(ctime(&timeoftheday));
 	
-    uint32_t angle, count, angleminute, anglecount, anglehour, anglecount2;
+    uint32_t angle, count, angleminute, anglecount, anglehour, anglecount2, maxdegree2, maxdegree3;
 	anglecount = 0;
 	anglecount2 = 0; 
+	maxdegree2 = (SERVO_MAX_DEGREE2 - (strtime.tm_sec * 2));
+	maxdegree3 = (SERVO_MAX_DEGREE3 - strtime.tm_min);
     //1. mcpwm gpio initialization
     mcpwm_example_gpio_initialize();
 
@@ -216,6 +213,10 @@ void mcpwm_example_servo_control(void *arg)
                 strtime.tm_hour = 0;
                 strtime.tm_min = 0;
                 strtime.tm_sec = 0;
+				anglecount = 0;
+				anglecount2 = 0;
+				maxdegree2 = (SERVO_MAX_DEGREE2 - (strtime.tm_sec * 2));
+				maxdegree3 = (SERVO_MAX_DEGREE3 - strtime.tm_min);
             }
 
             // Pressing s will initiate the "Set time" functionality
@@ -238,7 +239,13 @@ void mcpwm_example_servo_control(void *arg)
                 strtime.tm_hour = input_set[0] * 10 + input_set[1];
                 strtime.tm_min = input_set[2] * 10 + input_set[3];
                 strtime.tm_sec = 0;
-            }
+				anglecount = 0;
+				anglecount2 = 0; 
+				maxdegree2 = (SERVO_MAX_DEGREE2 - (strtime.tm_sec * 2));
+				maxdegree3 = (SERVO_MAX_DEGREE3 - strtime.tm_min);
+				
+				
+				}
 
             if(dep == 'a') {
                 double start_t, end_t, total_t;
@@ -290,14 +297,13 @@ void mcpwm_example_servo_control(void *arg)
         // Check if Alarm is the same as the time presently
         int alarm_hour = alarm_array[0] * 10 + alarm_array[1];
         int alarm_minutes = alarm_array[2] * 10 + alarm_array[3];
-        if(strtime.tm_hour == alarm_hour && strtime.tm_min == alarm_minutes) {
+        if(strtime.tm_hour == alarm_hour && strtime.tm_min == alarm_minutes && strtime.tm_sec == 0) {
             printf("ALARM HAS BEEN REACHED!\n");
             printf("BEEP! \nBEEP! \nBEEP! \nBEEP! \nBEEP!\n" );
-            led_alarm_flash();
+			led_alarm_flash();
         }
 
 		j = 0;
-		//int i = 0;
         for (count = 0; count < SERVO_MAX_DEGREE; count++) {
             //printf("Angle of rotation: %d\n", count);
             angle = servo_per_degree_init(count);
@@ -312,21 +318,17 @@ void mcpwm_example_servo_control(void *arg)
 			if(j == 45)
 			{
 				anglecount++;
-				//strtime.tm_sec = (strtime.tm_sec + 1);
-				//mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, angleminute);
-				if(anglecount == (SERVO_MAX_DEGREE2 - 1))
+				if(anglecount == (maxdegree2) || strtime.tm_sec >= 60)
 				{
 					anglecount = 0;
-                    if(minute_counter >= 60)
-					    strtime.tm_min = (strtime.tm_min + 1);
-                    else
-                        minute_counter = 0;
-					anglecount2 = anglecount2 + 10;
+					maxdegree2 = SERVO_MAX_DEGREE2;
+                    minute_counter = 0;
+					anglecount2 = anglecount2 + 1;
 					//mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, anglehour);
-					if(anglecount2 == (SERVO_MAX_DEGREE3 - 1))
+					if(anglecount2 == (maxdegree3) || strtime.tm_min >= 60)
 					{
 						anglecount2 = 0;
-						strtime.tm_hour = (strtime.tm_hour + 1);
+						maxdegree3 = SERVO_MAX_DEGREE3;
 					}
 				}
 				j = 0;
@@ -336,7 +338,6 @@ void mcpwm_example_servo_control(void *arg)
 		strtime.tm_sec = (strtime.tm_sec + 1);
         minute_counter = minute_counter + 1;
 		timeoftheday = mktime(&strtime);
-        // if(strtime.tm_sec % 2 == 0)
 	    printf(ctime(&timeoftheday));
     }
 }
