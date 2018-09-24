@@ -318,7 +318,7 @@ void mcpwm_example_servo_control(void *arg)
 			if(j == 45)
 			{
 				anglecount++;
-				if(anglecount == (maxdegree2) || strtime.tm_sec >= 60)
+				if(anglecount == (maxdegree2) || strtime.tm_sec >= 59)
 				{
 					anglecount = 0;
 					maxdegree2 = SERVO_MAX_DEGREE2;
