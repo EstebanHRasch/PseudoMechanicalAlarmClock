@@ -85,5 +85,5 @@ The servo component of our project is the backbone of the clock, because they ar
 ### Supporting Artifacts:
 The repository containing all of the code and documentation for this project can be found at https://github.com/EstebanHernandez1/EC444_Quest1.
 
-The video recorded can be found here at 
+The video recorded can be found here at https://drive.google.com/a/bu.edu/file/d/1JZPHfNBQCaCAUj9qjSZotNXKNZnIyDRI/view?usp=sharing
 
