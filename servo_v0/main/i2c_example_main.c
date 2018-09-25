@@ -202,9 +202,9 @@ static void run(int digits[]){
 static void mcpwm_example_gpio_initialize()
 {
     printf("Initializing mcpwm servo control gpio......\n");
-    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, 4);          // Set GPIO 18 as PWM0A, to which servo is connected
+    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, 4);          // Set pin A5 to the servo displaying seconds
 	mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0B, 26);         // Set pin A1 to the servo displaying minutes
-	mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, 25);         // Set pin A0 to the servo displaying seconds
+	mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, 25);         // Set pin A0 to the servo displaying hours
 }
 
 /**
