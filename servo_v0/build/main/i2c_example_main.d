@@ -1,4 +1,5 @@
-i2c_example_main.o: /home/david/esp/servo/main/i2c_example_main.c \
+i2c_example_main.o: \
+ /home/david/EC444/EC444_Quest1/servo_v0/main/i2c_example_main.c \
  /home/david/esp/esp-idf/components/newlib/include/stdio.h \
  /home/david/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/david/esp/esp-idf/components/newlib/include/newlib.h \
@@ -26,7 +27,7 @@ i2c_example_main.o: /home/david/esp/servo/main/i2c_example_main.c \
  /home/david/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/david/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/david/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/david/esp/servo/build/include/sdkconfig.h \
+ /home/david/EC444/EC444_Quest1/servo_v0/build/include/sdkconfig.h \
  /home/david/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/david/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/david/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -99,7 +100,8 @@ i2c_example_main.o: /home/david/esp/servo/main/i2c_example_main.c \
  /home/david/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/david/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/david/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
- /home/david/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h
+ /home/david/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h \
+ /home/david/esp/esp-idf/components/driver/include/driver/i2c.h
 
 /home/david/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -155,7 +157,7 @@ i2c_example_main.o: /home/david/esp/servo/main/i2c_example_main.c \
 
 /home/david/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/david/esp/servo/build/include/sdkconfig.h:
+/home/david/EC444/EC444_Quest1/servo_v0/build/include/sdkconfig.h:
 
 /home/david/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -302,4 +304,6 @@ i2c_example_main.o: /home/david/esp/servo/main/i2c_example_main.c \
 /home/david/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
 
 /home/david/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h:
-/home/david/esp/servo/main/./i2c_example_main.c:
+
+/home/david/esp/esp-idf/components/driver/include/driver/i2c.h:
+/home/david/EC444/EC444_Quest1/servo_v0/main/./i2c_example_main.c:
