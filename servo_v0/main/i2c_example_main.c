@@ -384,13 +384,14 @@ void mcpwm_example_servo_control(void *arg)
             // Pressing r will reset the clock to 00:00:00
             // Alphanumeric display and servos will be reset 
             if(dep == 'r') {
+				//resets all counters which resets the servos back to its starting position
                 strtime.tm_hour = 0;
                 strtime.tm_min = 0;
                 strtime.tm_sec = 0;
 				anglecount = 0;
 				anglecount2 = 0;
-				maxdegree2 = (SERVO_MAX_DEGREE2 - (strtime.tm_sec * 2));
-				maxdegree3 = (SERVO_MAX_DEGREE3 - strtime.tm_min);
+				maxdegree2 = (SERVO_MAX_DEGREE2 - (strtime.tm_sec * 2)); //resets the cycle length to 120
+				maxdegree3 = (SERVO_MAX_DEGREE3 - strtime.tm_min); //resets the cycle length to 120
             }
 
             // Pressing s will initiate the "Set time" functionality
@@ -486,43 +487,43 @@ void mcpwm_example_servo_control(void *arg)
         }
 
 		j = 0;
-        anglecount = (strtime.tm_sec * 2);
+        anglecount = (strtime.tm_sec * 2); //sets the counter according to the time struct
         anglecount2 = (strtime.tm_min * 2);
         for (count = 0; count < SERVO_MAX_DEGREE; count++) {
             //printf("Angle of rotation: %d\n", count);
             angle = servo_per_degree_init(count);
-			angleminute = servo_per_degree_init(anglecount);
+			angleminute = servo_per_degree_init(anglecount);  //sets the angle of the servo according to the counter
 			anglehour = servo_per_degree_init(anglecount2);
             //printf("pulse width: %dus\n", angle);
-            mcpwm_set_duty_in_us(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, angle);
-			mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, angleminute);
-			mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, anglehour);
+            mcpwm_set_duty_in_us(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, angle);  //this function tells the servo to move to the specified angle
+			mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, angleminute);//minute servo
+			mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, anglehour); //hour servo
 			
 			j++;
-			if(j == 45)
+			if(j == 45) //once j = 45 a full second has passes
 			{
 				anglecount++;
-				if(anglecount == (maxdegree2) || strtime.tm_sec >= 59)
+				if(anglecount == (maxdegree2) || strtime.tm_sec >= 59) //if either condition passes a full minute has passed
 				{
-					anglecount = 0;
-					maxdegree2 = SERVO_MAX_DEGREE2;
-                    minute_counter = 0;
+					anglecount = 0; //resets the minute counter to 0
+					maxdegree2 = SERVO_MAX_DEGREE2; //resets the cycle length of the minute servo to 120 degrees
+                    minute_counter = 0; 
 					anglecount2 = anglecount2 + 1;
 					//mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, anglehour);
-					if(anglecount2 == (maxdegree3) || strtime.tm_min >= 60)
+					if(anglecount2 == (maxdegree3) || strtime.tm_min >= 60) // if either condition passes a full hour has passed
 					{
-						anglecount2 = 0;
-						maxdegree3 = SERVO_MAX_DEGREE3;
+						anglecount2 = 0; //resets the hour counter to 0
+						maxdegree3 = SERVO_MAX_DEGREE3;  //resets the cycle length of the hour servo to 120 degrees
 					}
 				}
-				j = 0;
+				j = 0; //resets the seconds counter to 0
 			}
             vTaskDelay(1.999);     //Add delay, since it takes time for servo to rotate, generally 100ms/60degree rotation at 5V
 		}
-		strtime.tm_sec = (strtime.tm_sec + 1);
+		strtime.tm_sec = (strtime.tm_sec + 1); //increments the seconds struct every second
         minute_counter = minute_counter + 1;
 		timeoftheday = mktime(&strtime);
-	    printf(ctime(&timeoftheday));
+	    printf(ctime(&timeoftheday)); //prints the time to the terminal
 
         // In order to constantly display the correct time to the alphanumeric display, the struct containing the parameters for
         // minutes and hours will be updated regularly to display the correct time
