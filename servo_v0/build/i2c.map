@@ -6996,7 +6996,7 @@ END GROUP
                 0x000000003f40a2c0                _thread_local_end = ABSOLUTE (.)
                 0x000000003f40a2c0                . = ALIGN (0x4)
 
-.flash.text     0x00000000400d0018    0x16f10
+.flash.text     0x00000000400d0018    0x16f14
                 0x00000000400d0018                _stext = .
                 0x00000000400d0018                _text_start = ABSOLUTE (.)
  *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
@@ -7936,983 +7936,983 @@ END GROUP
                 0x00000000400d2690                led_alarm_flash
  *fill*         0x00000000400d270a        0x2 
  .text.mcpwm_example_servo_control
-                0x00000000400d270c      0x4a3 /home/david/EC444/EC444_Quest1/servo_v0/build/main/libmain.a(i2c_example_main.o)
-                                        0x53f (size before relaxing)
+                0x00000000400d270c      0x4a7 /home/david/EC444/EC444_Quest1/servo_v0/build/main/libmain.a(i2c_example_main.o)
+                                        0x543 (size before relaxing)
                 0x00000000400d270c                mcpwm_example_servo_control
- *fill*         0x00000000400d2baf        0x1 
+ *fill*         0x00000000400d2bb3        0x1 
  .text.app_main
-                0x00000000400d2bb0       0x24 /home/david/EC444/EC444_Quest1/servo_v0/build/main/libmain.a(i2c_example_main.o)
+                0x00000000400d2bb4       0x24 /home/david/EC444/EC444_Quest1/servo_v0/build/main/libmain.a(i2c_example_main.o)
                                          0x28 (size before relaxing)
-                0x00000000400d2bb0                app_main
- .text          0x00000000400d2bd4       0x38 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+                0x00000000400d2bb4                app_main
+ .text          0x00000000400d2bd8       0x38 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
                                          0x40 (size before relaxing)
-                0x00000000400d2bd4                __assert_func
-                0x00000000400d2bfc                __assert
- .text          0x00000000400d2c0c       0x54 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+                0x00000000400d2bd8                __assert_func
+                0x00000000400d2c00                __assert
+ .text          0x00000000400d2c10       0x54 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
                                          0x5c (size before relaxing)
-                0x00000000400d2c0c                _fiprintf_r
-                0x00000000400d2c30                fiprintf
- .text          0x00000000400d2c60       0xc0 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
+                0x00000000400d2c10                _fiprintf_r
+                0x00000000400d2c34                fiprintf
+ .text          0x00000000400d2c64       0xc0 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
                                          0xcc (size before relaxing)
-                0x00000000400d2c60                _fopen_r
-                0x00000000400d2d0c                fopen
- .text          0x00000000400d2d20       0x2d /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
+                0x00000000400d2c64                _fopen_r
+                0x00000000400d2d10                fopen
+ .text          0x00000000400d2d24       0x2d /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
                                          0x31 (size before relaxing)
-                0x00000000400d2d20                _fseek_r
-                0x00000000400d2d38                fseek
- *fill*         0x00000000400d2d4d        0x3 
- .text          0x00000000400d2d50      0x32e /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
+                0x00000000400d2d24                _fseek_r
+                0x00000000400d2d3c                fseek
+ *fill*         0x00000000400d2d51        0x3 
+ .text          0x00000000400d2d54      0x32e /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
                                         0x336 (size before relaxing)
-                0x00000000400d2d50                _fseeko_r
-                0x00000000400d3068                fseeko
- *fill*         0x00000000400d307e        0x2 
- .text          0x00000000400d3080       0x74 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
+                0x00000000400d2d54                _fseeko_r
+                0x00000000400d306c                fseeko
+ *fill*         0x00000000400d3082        0x2 
+ .text          0x00000000400d3084       0x74 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
                                          0x78 (size before relaxing)
-                0x00000000400d3080                _printf_r
-                0x00000000400d30b8                printf
- .text          0x00000000400d30f4       0x4c /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
-                0x00000000400d30f4                _putchar_r
-                0x00000000400d3118                putchar
- .text          0x00000000400d3140       0xaa /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
-                0x00000000400d3140                _puts_r
-                0x00000000400d31d8                puts
- *fill*         0x00000000400d31ea        0x2 
- .text          0x00000000400d31ec       0xe8 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
+                0x00000000400d3084                _printf_r
+                0x00000000400d30bc                printf
+ .text          0x00000000400d30f8       0x4c /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
+                0x00000000400d30f8                _putchar_r
+                0x00000000400d311c                putchar
+ .text          0x00000000400d3144       0xaa /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
+                0x00000000400d3144                _puts_r
+                0x00000000400d31dc                puts
+ *fill*         0x00000000400d31ee        0x2 
+ .text          0x00000000400d31f0       0xe8 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
                                          0xfc (size before relaxing)
-                0x00000000400d31ec                cleanup_glue
-                0x00000000400d3204                _reclaim_reent
- .text          0x00000000400d32d4       0xd6 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
-                0x00000000400d32d4                _snprintf_r
-                0x00000000400d333c                snprintf
- *fill*         0x00000000400d33aa        0x2 
- .text          0x00000000400d33ac       0xa7 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
+                0x00000000400d31f0                cleanup_glue
+                0x00000000400d3208                _reclaim_reent
+ .text          0x00000000400d32d8       0xd6 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
+                0x00000000400d32d8                _snprintf_r
+                0x00000000400d3340                snprintf
+ *fill*         0x00000000400d33ae        0x2 
+ .text          0x00000000400d33b0       0xa7 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
                                          0xaf (size before relaxing)
-                0x00000000400d33ac                _sprintf_r
-                0x00000000400d33f8                sprintf
- *fill*         0x00000000400d3453        0x1 
- .text          0x00000000400d3454     0x357e /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+                0x00000000400d33b0                _sprintf_r
+                0x00000000400d33fc                sprintf
+ *fill*         0x00000000400d3457        0x1 
+ .text          0x00000000400d3458     0x357e /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
                                        0x35ca (size before relaxing)
-                0x00000000400d38d4                _svfprintf_r
- *fill*         0x00000000400d69d2        0x2 
- .text          0x00000000400d69d4     0x26a1 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+                0x00000000400d38d8                _svfprintf_r
+ *fill*         0x00000000400d69d6        0x2 
+ .text          0x00000000400d69d8     0x26a1 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
                                        0x26ad (size before relaxing)
-                0x00000000400d6e54                __sprint_r
-                0x00000000400d6ec0                _vfiprintf_r
-                0x00000000400d8fc0                vfiprintf
- *fill*         0x00000000400d9075        0x3 
- .text          0x00000000400d9078     0x3739 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+                0x00000000400d6e58                __sprint_r
+                0x00000000400d6ec4                _vfiprintf_r
+                0x00000000400d8fc4                vfiprintf
+ *fill*         0x00000000400d9079        0x3 
+ .text          0x00000000400d907c     0x3739 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
                                        0x3785 (size before relaxing)
-                0x00000000400d94f8                _vfprintf_r
-                0x00000000400dc6fc                vfprintf
- *fill*         0x00000000400dc7b1        0x3 
- .text          0x00000000400dc7b4       0x5e /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
+                0x00000000400d94fc                _vfprintf_r
+                0x00000000400dc700                vfprintf
+ *fill*         0x00000000400dc7b5        0x3 
+ .text          0x00000000400dc7b8       0x5e /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
                                          0x62 (size before relaxing)
-                0x00000000400dc7b4                vprintf
-                0x00000000400dc7e4                _vprintf_r
- *fill*         0x00000000400dc812        0x2 
- .text          0x00000000400dc814      0xd5a /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+                0x00000000400dc7b8                vprintf
+                0x00000000400dc7e8                _vprintf_r
+ *fill*         0x00000000400dc816        0x2 
+ .text          0x00000000400dc818      0xd5a /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
                                         0xdae (size before relaxing)
-                0x00000000400dc920                _dtoa_r
- *fill*         0x00000000400dd56e        0x2 
- .text          0x00000000400dd570       0x7f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
-                0x00000000400dd570                __sflags
- *fill*         0x00000000400dd5ef        0x1 
- .text          0x00000000400dd5f0      0x82a /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
+                0x00000000400dc924                _dtoa_r
+ *fill*         0x00000000400dd572        0x2 
+ .text          0x00000000400dd574       0x7f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
+                0x00000000400dd574                __sflags
+ *fill*         0x00000000400dd5f3        0x1 
+ .text          0x00000000400dd5f4      0x82a /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
                                         0x82e (size before relaxing)
-                0x00000000400dd5f0                _Balloc
-                0x00000000400dd664                _Bfree
-                0x00000000400dd694                __multadd
-                0x00000000400dd708                __s2b
-                0x00000000400dd788                __hi0bits
-                0x00000000400dd7d4                __lo0bits
-                0x00000000400dd840                __i2b
-                0x00000000400dd854                __multiply
-                0x00000000400dd958                __pow5mult
-                0x00000000400dd9e8                __lshift
-                0x00000000400dda84                __mcmp
-                0x00000000400ddac0                __mdiff
-                0x00000000400ddb84                __ulp
-                0x00000000400ddbcc                __b2d
-                0x00000000400ddc70                __d2b
-                0x00000000400ddd10                __ratio
-                0x00000000400ddd64                _mprec_log10
-                0x00000000400ddd98                __copybits
-                0x00000000400dddcc                __any_on
- *fill*         0x00000000400dde1a        0x2 
- .text          0x00000000400dde1c       0xbc /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
-                0x00000000400dde1c                _putc_r
-                0x00000000400ddec4                putc
- .text          0x00000000400dded8       0x62 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
-                0x00000000400dded8                frexp
- *fill*         0x00000000400ddf3a        0x2 
- .text          0x00000000400ddf3c     0x2582 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+                0x00000000400dd5f4                _Balloc
+                0x00000000400dd668                _Bfree
+                0x00000000400dd698                __multadd
+                0x00000000400dd70c                __s2b
+                0x00000000400dd78c                __hi0bits
+                0x00000000400dd7d8                __lo0bits
+                0x00000000400dd844                __i2b
+                0x00000000400dd858                __multiply
+                0x00000000400dd95c                __pow5mult
+                0x00000000400dd9ec                __lshift
+                0x00000000400dda88                __mcmp
+                0x00000000400ddac4                __mdiff
+                0x00000000400ddb88                __ulp
+                0x00000000400ddbd0                __b2d
+                0x00000000400ddc74                __d2b
+                0x00000000400ddd14                __ratio
+                0x00000000400ddd68                _mprec_log10
+                0x00000000400ddd9c                __copybits
+                0x00000000400dddd0                __any_on
+ *fill*         0x00000000400dde1e        0x2 
+ .text          0x00000000400dde20       0xbc /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
+                0x00000000400dde20                _putc_r
+                0x00000000400ddec8                putc
+ .text          0x00000000400ddedc       0x62 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
+                0x00000000400ddedc                frexp
+ *fill*         0x00000000400ddf3e        0x2 
+ .text          0x00000000400ddf40     0x2582 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
                                        0x2586 (size before relaxing)
-                0x00000000400de3bc                __ssprint_r
-                0x00000000400de4c4                _svfiprintf_r
- *fill*         0x00000000400e04be        0x2 
+                0x00000000400de3c0                __ssprint_r
+                0x00000000400de4c8                _svfiprintf_r
+ *fill*         0x00000000400e04c2        0x2 
  .text.get_boot_time
-                0x00000000400e04c0       0x23 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+                0x00000000400e04c4       0x23 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
                                          0x27 (size before relaxing)
- *fill*         0x00000000400e04e3        0x1 
+ *fill*         0x00000000400e04e7        0x1 
  .text.set_boot_time
-                0x00000000400e04e4       0x24 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+                0x00000000400e04e8       0x24 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
                                          0x28 (size before relaxing)
  .text.get_time_since_boot
-                0x00000000400e0508       0x1f /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
- *fill*         0x00000000400e0527        0x1 
+                0x00000000400e050c       0x1f /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+ *fill*         0x00000000400e052b        0x1 
  .text.adjust_boot_time
-                0x00000000400e0528      0x12a /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+                0x00000000400e052c      0x12a /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
                                         0x12e (size before relaxing)
- *fill*         0x00000000400e0652        0x2 
+ *fill*         0x00000000400e0656        0x2 
  .text.get_adjusted_boot_time
-                0x00000000400e0654       0x1e /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+                0x00000000400e0658       0x1e /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
                                          0x26 (size before relaxing)
- *fill*         0x00000000400e0672        0x2 
+ *fill*         0x00000000400e0676        0x2 
  .text.esp_clk_slowclk_cal_set
-                0x00000000400e0674       0x6a /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+                0x00000000400e0678       0x6a /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
                                          0x6e (size before relaxing)
-                0x00000000400e0674                esp_clk_slowclk_cal_set
- *fill*         0x00000000400e06de        0x2 
+                0x00000000400e0678                esp_clk_slowclk_cal_set
+ *fill*         0x00000000400e06e2        0x2 
  .text.esp_clk_slowclk_cal_get
-                0x00000000400e06e0        0xd /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
-                0x00000000400e06e0                esp_clk_slowclk_cal_get
- *fill*         0x00000000400e06ed        0x3 
+                0x00000000400e06e4        0xd /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+                0x00000000400e06e4                esp_clk_slowclk_cal_get
+ *fill*         0x00000000400e06f1        0x3 
  .text.get_rtc_time_us
-                0x00000000400e06f0       0x43 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+                0x00000000400e06f4       0x43 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
                                          0x47 (size before relaxing)
- *fill*         0x00000000400e0733        0x1 
+ *fill*         0x00000000400e0737        0x1 
  .text.esp_set_time_from_rtc
-                0x00000000400e0734       0x27 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+                0x00000000400e0738       0x27 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
                                          0x2f (size before relaxing)
-                0x00000000400e0734                esp_set_time_from_rtc
- *fill*         0x00000000400e075b        0x1 
+                0x00000000400e0738                esp_set_time_from_rtc
+ *fill*         0x00000000400e075f        0x1 
  .text._raise_r
-                0x00000000400e075c        0x6 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400e0760        0x6 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
                                           0x9 (size before relaxing)
-                0x00000000400e075c                _raise_r
- *fill*         0x00000000400e0762        0x2 
- .text._sbrk_r  0x00000000400e0764        0x6 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400e0760                _raise_r
+ *fill*         0x00000000400e0766        0x2 
+ .text._sbrk_r  0x00000000400e0768        0x6 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
                                           0x9 (size before relaxing)
-                0x00000000400e0764                _sbrk_r
- *fill*         0x00000000400e076a        0x2 
+                0x00000000400e0768                _sbrk_r
+ *fill*         0x00000000400e076e        0x2 
  .text.raise_r_stub
-                0x00000000400e076c        0xf /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscall_table.o)
- *fill*         0x00000000400e077b        0x1 
+                0x00000000400e0770        0xf /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscall_table.o)
+ *fill*         0x00000000400e077f        0x1 
  .text.esp_setup_syscall_table
-                0x00000000400e077c       0x2b /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscall_table.o)
-                0x00000000400e077c                esp_setup_syscall_table
- *fill*         0x00000000400e07a7        0x1 
+                0x00000000400e0780       0x2b /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscall_table.o)
+                0x00000000400e0780                esp_setup_syscall_table
+ *fill*         0x00000000400e07ab        0x1 
  .text.esp_pthread_cfg_key_destructor
-                0x00000000400e07a8        0xe /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread.o)
- *fill*         0x00000000400e07b6        0x2 
+                0x00000000400e07ac        0xe /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread.o)
+ *fill*         0x00000000400e07ba        0x2 
  .text.esp_pthread_init
-                0x00000000400e07b8       0x32 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread.o)
+                0x00000000400e07bc       0x32 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread.o)
                                          0x3a (size before relaxing)
-                0x00000000400e07b8                esp_pthread_init
- *fill*         0x00000000400e07ea        0x2 
+                0x00000000400e07bc                esp_pthread_init
+ *fill*         0x00000000400e07ee        0x2 
  .text.find_key
-                0x00000000400e07ec       0x28 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400e07f0       0x28 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x2b (size before relaxing)
- *fill*         0x00000000400e0814        0x0 
+ *fill*         0x00000000400e0818        0x0 
  .text.pthread_key_create
-                0x00000000400e0814       0x46 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400e0818       0x46 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x4a (size before relaxing)
-                0x00000000400e0814                pthread_key_create
- *fill*         0x00000000400e085a        0x2 
+                0x00000000400e0818                pthread_key_create
+ *fill*         0x00000000400e085e        0x2 
  .text.pthread_key_delete
-                0x00000000400e085c       0x3e /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400e0860       0x3e /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x45 (size before relaxing)
-                0x00000000400e085c                pthread_key_delete
- *fill*         0x00000000400e089a        0x2 
+                0x00000000400e0860                pthread_key_delete
+ *fill*         0x00000000400e089e        0x2 
  .text.s_get_num_reserved_regions
-                0x00000000400e089c       0x13 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
- *fill*         0x00000000400e08af        0x1 
+                0x00000000400e08a0       0x13 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
+ *fill*         0x00000000400e08b3        0x1 
  .text.s_prepare_reserved_regions
-                0x00000000400e08b0       0xb2 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
+                0x00000000400e08b4       0xb2 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
                                          0xba (size before relaxing)
- *fill*         0x00000000400e0962        0x2 
+ *fill*         0x00000000400e0966        0x2 
  .text.soc_get_available_memory_region_max_count
-                0x00000000400e0964       0x12 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
-                0x00000000400e0964                soc_get_available_memory_region_max_count
- *fill*         0x00000000400e0976        0x2 
+                0x00000000400e0968       0x12 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
+                0x00000000400e0968                soc_get_available_memory_region_max_count
+ *fill*         0x00000000400e097a        0x2 
  .text.soc_get_available_memory_regions
-                0x00000000400e0978      0x131 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
+                0x00000000400e097c      0x131 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
                                         0x135 (size before relaxing)
-                0x00000000400e0978                soc_get_available_memory_regions
- *fill*         0x00000000400e0aa9        0x3 
+                0x00000000400e097c                soc_get_available_memory_regions
+ *fill*         0x00000000400e0aad        0x3 
  .text.spi_flash_init_lock
-                0x00000000400e0aac       0x22 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400e0ab0       0x22 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
                                          0x26 (size before relaxing)
-                0x00000000400e0aac                spi_flash_init_lock
- *fill*         0x00000000400e0ace        0x2 
+                0x00000000400e0ab0                spi_flash_init_lock
+ *fill*         0x00000000400e0ad2        0x2 
  .text.spi_flash_op_lock
-                0x00000000400e0ad0       0x12 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
-                0x00000000400e0ad0                spi_flash_op_lock
- *fill*         0x00000000400e0ae2        0x2 
+                0x00000000400e0ad4       0x12 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400e0ad4                spi_flash_op_lock
+ *fill*         0x00000000400e0ae6        0x2 
  .text.spi_flash_op_unlock
-                0x00000000400e0ae4        0xd /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400e0ae8        0xd /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
                                          0x10 (size before relaxing)
-                0x00000000400e0ae4                spi_flash_op_unlock
- *fill*         0x00000000400e0af1        0x3 
+                0x00000000400e0ae8                spi_flash_op_unlock
+ *fill*         0x00000000400e0af5        0x3 
  .text.is_safe_write_address
-                0x00000000400e0af4       0x32 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_ops.o)
+                0x00000000400e0af8       0x32 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_ops.o)
                                          0x3a (size before relaxing)
- *fill*         0x00000000400e0b26        0x2 
+ *fill*         0x00000000400e0b2a        0x2 
  .text.spi_flash_init
-                0x00000000400e0b28        0x8 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_ops.o)
+                0x00000000400e0b2c        0x8 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_ops.o)
                                           0xb (size before relaxing)
-                0x00000000400e0b28                spi_flash_init
- *fill*         0x00000000400e0b30        0x0 
+                0x00000000400e0b2c                spi_flash_init
+ *fill*         0x00000000400e0b34        0x0 
  .text.spi_flash_cache2phys
-                0x00000000400e0b30       0x68 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_mmap.o)
-                0x00000000400e0b30                spi_flash_cache2phys
+                0x00000000400e0b34       0x68 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_mmap.o)
+                0x00000000400e0b34                spi_flash_cache2phys
  .text.uart_tx_char
-                0x00000000400e0b98       0x25 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x00000000400e0bbd        0x3 
+                0x00000000400e0b9c       0x25 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x00000000400e0bc1        0x3 
  .text.uart_rx_char
-                0x00000000400e0bc0       0x21 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x00000000400e0be1        0x3 
+                0x00000000400e0bc4       0x21 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x00000000400e0be5        0x3 
  .text.uart_read_char
-                0x00000000400e0be4       0x28 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e0be8       0x28 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
  .text.uart_end_select
-                0x00000000400e0c0c       0x80 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e0c10       0x80 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x8c (size before relaxing)
  .text.uart_start_select
-                0x00000000400e0c8c      0x178 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e0c90      0x178 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                         0x1a4 (size before relaxing)
  .text.select_notif_callback
-                0x00000000400e0e04       0xbe /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e0e08       0xbe /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0xc2 (size before relaxing)
- *fill*         0x00000000400e0ec2        0x2 
+ *fill*         0x00000000400e0ec6        0x2 
  .text.uart_tcflush
-                0x00000000400e0ec4       0x3a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e0ec8       0x3a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x3e (size before relaxing)
- *fill*         0x00000000400e0efe        0x2 
+ *fill*         0x00000000400e0f02        0x2 
  .text.uart_tcdrain
-                0x00000000400e0f00       0x2c /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e0f04       0x2c /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x30 (size before relaxing)
  .text.uart_tcgetattr
-                0x00000000400e0f2c      0x374 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e0f30      0x374 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                         0x384 (size before relaxing)
  .text.uart_tcsetattr
-                0x00000000400e12a0      0x246 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e12a4      0x246 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                         0x25e (size before relaxing)
- *fill*         0x00000000400e14e6        0x2 
+ *fill*         0x00000000400e14ea        0x2 
  .text.uart_access
-                0x00000000400e14e8       0x5a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x00000000400e1542        0x2 
+                0x00000000400e14ec       0x5a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x00000000400e1546        0x2 
  .text.uart_open
-                0x00000000400e1544       0x59 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e1548       0x59 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x5d (size before relaxing)
- *fill*         0x00000000400e159d        0x3 
+ *fill*         0x00000000400e15a1        0x3 
  .text.uart_fcntl
-                0x00000000400e15a0       0x81 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e15a4       0x81 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x85 (size before relaxing)
- *fill*         0x00000000400e1621        0x3 
+ *fill*         0x00000000400e1625        0x3 
  .text.uart_fstat
-                0x00000000400e1624       0x1e /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e1628       0x1e /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x21 (size before relaxing)
- *fill*         0x00000000400e1642        0x2 
+ *fill*         0x00000000400e1646        0x2 
  .text.uart_close
-                0x00000000400e1644       0x19 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e1648       0x19 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x1c (size before relaxing)
- *fill*         0x00000000400e165d        0x3 
+ *fill*         0x00000000400e1661        0x3 
  .text.uart_return_char
-                0x00000000400e1660       0x27 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e1664       0x27 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x2a (size before relaxing)
- *fill*         0x00000000400e1687        0x1 
+ *fill*         0x00000000400e168b        0x1 
  .text.uart_read
-                0x00000000400e1688       0x9e /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e168c       0x9e /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0xaa (size before relaxing)
- *fill*         0x00000000400e1726        0x2 
+ *fill*         0x00000000400e172a        0x2 
  .text.uart_write
-                0x00000000400e1728       0x71 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e172c       0x71 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x75 (size before relaxing)
- *fill*         0x00000000400e1799        0x3 
+ *fill*         0x00000000400e179d        0x3 
  .text.esp_vfs_dev_uart_register
-                0x00000000400e179c       0x78 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400e17a0       0x78 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
                                          0x7c (size before relaxing)
-                0x00000000400e179c                esp_vfs_dev_uart_register
+                0x00000000400e17a0                esp_vfs_dev_uart_register
  .text.get_vfs_for_fd
-                0x00000000400e1814       0x38 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1818       0x38 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
  .text.esp_vfs_register_common
-                0x00000000400e184c       0xf1 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
- *fill*         0x00000000400e193d        0x3 
+                0x00000000400e1850       0xf1 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+ *fill*         0x00000000400e1941        0x3 
  .text.get_vfs_for_path
-                0x00000000400e1940       0x70 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1944       0x70 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
  .text.translate_path
-                0x00000000400e19b0       0x3d /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
- *fill*         0x00000000400e19ed        0x3 
+                0x00000000400e19b4       0x3d /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+ *fill*         0x00000000400e19f1        0x3 
  .text.esp_vfs_register
-                0x00000000400e19f0       0x1c /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e19f4       0x1c /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x20 (size before relaxing)
-                0x00000000400e19f0                esp_vfs_register
+                0x00000000400e19f4                esp_vfs_register
  .text.esp_vfs_open
-                0x00000000400e1a0c       0xc9 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1a10       0xc9 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0xd1 (size before relaxing)
-                0x00000000400e1a0c                esp_vfs_open
- *fill*         0x00000000400e1ad5        0x3 
+                0x00000000400e1a10                esp_vfs_open
+ *fill*         0x00000000400e1ad9        0x3 
  .text.esp_vfs_write
-                0x00000000400e1ad8       0x6a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1adc       0x6a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x6e (size before relaxing)
-                0x00000000400e1ad8                esp_vfs_write
- *fill*         0x00000000400e1b42        0x2 
+                0x00000000400e1adc                esp_vfs_write
+ *fill*         0x00000000400e1b46        0x2 
  .text.esp_vfs_lseek
-                0x00000000400e1b44       0x6a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1b48       0x6a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x6e (size before relaxing)
-                0x00000000400e1b44                esp_vfs_lseek
- *fill*         0x00000000400e1bae        0x2 
+                0x00000000400e1b48                esp_vfs_lseek
+ *fill*         0x00000000400e1bb2        0x2 
  .text.esp_vfs_read
-                0x00000000400e1bb0       0x6a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1bb4       0x6a /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x6e (size before relaxing)
-                0x00000000400e1bb0                esp_vfs_read
- *fill*         0x00000000400e1c1a        0x2 
+                0x00000000400e1bb4                esp_vfs_read
+ *fill*         0x00000000400e1c1e        0x2 
  .text.esp_vfs_close
-                0x00000000400e1c1c       0x98 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1c20       0x98 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x9f (size before relaxing)
-                0x00000000400e1c1c                esp_vfs_close
- *fill*         0x00000000400e1cb4        0x0 
+                0x00000000400e1c20                esp_vfs_close
+ *fill*         0x00000000400e1cb8        0x0 
  .text.esp_vfs_fstat
-                0x00000000400e1cb4       0x68 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1cb8       0x68 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x6c (size before relaxing)
-                0x00000000400e1cb4                esp_vfs_fstat
+                0x00000000400e1cb8                esp_vfs_fstat
  .text.esp_vfs_stat
-                0x00000000400e1d1c       0x45 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1d20       0x45 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x49 (size before relaxing)
-                0x00000000400e1d1c                esp_vfs_stat
- *fill*         0x00000000400e1d61        0x3 
+                0x00000000400e1d20                esp_vfs_stat
+ *fill*         0x00000000400e1d65        0x3 
  .text.esp_vfs_link
-                0x00000000400e1d64       0x64 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1d68       0x64 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x6c (size before relaxing)
-                0x00000000400e1d64                esp_vfs_link
+                0x00000000400e1d68                esp_vfs_link
  .text.esp_vfs_unlink
-                0x00000000400e1dc8       0x40 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1dcc       0x40 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x44 (size before relaxing)
-                0x00000000400e1dc8                esp_vfs_unlink
+                0x00000000400e1dcc                esp_vfs_unlink
  .text.esp_vfs_rename
-                0x00000000400e1e08       0x64 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1e0c       0x64 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
                                          0x6c (size before relaxing)
-                0x00000000400e1e08                esp_vfs_rename
+                0x00000000400e1e0c                esp_vfs_rename
  .text.esp_vfs_select_triggered_isr
-                0x00000000400e1e6c       0x40 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
-                0x00000000400e1e6c                esp_vfs_select_triggered_isr
+                0x00000000400e1e70       0x40 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e1e70                esp_vfs_select_triggered_isr
  .text.esp_ota_get_running_partition
-                0x00000000400e1eac       0x67 /home/david/EC444/EC444_Quest1/servo_v0/build/app_update/libapp_update.a(esp_ota_ops.o)
+                0x00000000400e1eb0       0x67 /home/david/EC444/EC444_Quest1/servo_v0/build/app_update/libapp_update.a(esp_ota_ops.o)
                                          0x7b (size before relaxing)
-                0x00000000400e1eac                esp_ota_get_running_partition
- *fill*         0x00000000400e1f13        0x1 
+                0x00000000400e1eb0                esp_ota_get_running_partition
+ *fill*         0x00000000400e1f17        0x1 
  .text.uart_set_break
-                0x00000000400e1f14       0x69 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e1f18       0x69 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x6d (size before relaxing)
- *fill*         0x00000000400e1f7d        0x3 
+ *fill*         0x00000000400e1f81        0x3 
  .text.uart_pattern_queue_update
-                0x00000000400e1f80       0x86 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e1f84       0x86 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x8e (size before relaxing)
- *fill*         0x00000000400e2006        0x2 
+ *fill*         0x00000000400e200a        0x2 
  .text.uart_reset_rx_fifo
-                0x00000000400e2008       0x9c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e200c       0x9c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0xa4 (size before relaxing)
  .text.uart_fill_fifo
-                0x00000000400e20a4       0xa9 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
- *fill*         0x00000000400e214d        0x3 
+                0x00000000400e20a8       0xa9 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+ *fill*         0x00000000400e2151        0x3 
  .text.uart_pattern_link_free
-                0x00000000400e2150       0x6e /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e2154       0x6e /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x76 (size before relaxing)
- *fill*         0x00000000400e21be        0x2 
+ *fill*         0x00000000400e21c2        0x2 
  .text.uart_pattern_enqueue
-                0x00000000400e21c0       0x88 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e21c4       0x88 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x94 (size before relaxing)
  .text.uart_set_word_length
-                0x00000000400e2248       0x8a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e224c       0x8a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x96 (size before relaxing)
-                0x00000000400e2248                uart_set_word_length
- *fill*         0x00000000400e22d2        0x2 
+                0x00000000400e224c                uart_set_word_length
+ *fill*         0x00000000400e22d6        0x2 
  .text.uart_get_word_length
-                0x00000000400e22d4       0x42 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e22d8       0x42 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x46 (size before relaxing)
-                0x00000000400e22d4                uart_get_word_length
- *fill*         0x00000000400e2316        0x2 
+                0x00000000400e22d8                uart_get_word_length
+ *fill*         0x00000000400e231a        0x2 
  .text.uart_set_stop_bits
-                0x00000000400e2318       0xc9 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e231c       0xc9 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0xd1 (size before relaxing)
-                0x00000000400e2318                uart_set_stop_bits
- *fill*         0x00000000400e23e1        0x3 
+                0x00000000400e231c                uart_set_stop_bits
+ *fill*         0x00000000400e23e5        0x3 
  .text.uart_get_stop_bits
-                0x00000000400e23e4       0x5e /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e23e8       0x5e /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x62 (size before relaxing)
-                0x00000000400e23e4                uart_get_stop_bits
- *fill*         0x00000000400e2442        0x2 
+                0x00000000400e23e8                uart_get_stop_bits
+ *fill*         0x00000000400e2446        0x2 
  .text.uart_set_parity
-                0x00000000400e2444       0x79 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e2448       0x79 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x81 (size before relaxing)
-                0x00000000400e2444                uart_set_parity
- *fill*         0x00000000400e24bd        0x3 
+                0x00000000400e2448                uart_set_parity
+ *fill*         0x00000000400e24c1        0x3 
  .text.uart_get_parity
-                0x00000000400e24c0       0x56 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e24c4       0x56 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x5a (size before relaxing)
-                0x00000000400e24c0                uart_get_parity
- *fill*         0x00000000400e2516        0x2 
+                0x00000000400e24c4                uart_get_parity
+ *fill*         0x00000000400e251a        0x2 
  .text.uart_set_baudrate
-                0x00000000400e2518       0xa3 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e251c       0xa3 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0xae (size before relaxing)
-                0x00000000400e2518                uart_set_baudrate
- *fill*         0x00000000400e25bb        0x1 
+                0x00000000400e251c                uart_set_baudrate
+ *fill*         0x00000000400e25bf        0x1 
  .text.uart_get_baudrate
-                0x00000000400e25bc       0x7a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e25c0       0x7a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x86 (size before relaxing)
-                0x00000000400e25bc                uart_get_baudrate
- *fill*         0x00000000400e2636        0x2 
+                0x00000000400e25c0                uart_get_baudrate
+ *fill*         0x00000000400e263a        0x2 
  .text.uart_set_hw_flow_ctrl
-                0x00000000400e2638      0x124 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e263c      0x124 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x134 (size before relaxing)
-                0x00000000400e2638                uart_set_hw_flow_ctrl
+                0x00000000400e263c                uart_set_hw_flow_ctrl
  .text.uart_clear_intr_status
-                0x00000000400e275c       0x3d /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e2760       0x3d /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x41 (size before relaxing)
-                0x00000000400e275c                uart_clear_intr_status
- *fill*         0x00000000400e2799        0x3 
+                0x00000000400e2760                uart_clear_intr_status
+ *fill*         0x00000000400e279d        0x3 
  .text.uart_enable_intr_mask
-                0x00000000400e279c      0x18a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e27a0      0x18a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x1a2 (size before relaxing)
-                0x00000000400e279c                uart_enable_intr_mask
- *fill*         0x00000000400e2926        0x2 
+                0x00000000400e27a0                uart_enable_intr_mask
+ *fill*         0x00000000400e292a        0x2 
  .text.uart_disable_intr_mask
-                0x00000000400e2928       0xf0 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e292c       0xf0 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x100 (size before relaxing)
-                0x00000000400e2928                uart_disable_intr_mask
+                0x00000000400e292c                uart_disable_intr_mask
  .text.uart_rx_intr_handler_default
-                0x00000000400e2a18      0x6a3 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e2a1c      0x6a3 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x73f (size before relaxing)
- *fill*         0x00000000400e30bb        0x1 
+ *fill*         0x00000000400e30bf        0x1 
  .text.uart_pattern_queue_reset
-                0x00000000400e30bc       0xa5 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e30c0       0xa5 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0xb1 (size before relaxing)
-                0x00000000400e30bc                uart_pattern_queue_reset
- *fill*         0x00000000400e3161        0x3 
+                0x00000000400e30c0                uart_pattern_queue_reset
+ *fill*         0x00000000400e3165        0x3 
  .text.uart_enable_rx_intr
-                0x00000000400e3164       0x12 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
-                0x00000000400e3164                uart_enable_rx_intr
- *fill*         0x00000000400e3176        0x2 
+                0x00000000400e3168       0x12 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3168                uart_enable_rx_intr
+ *fill*         0x00000000400e317a        0x2 
  .text.uart_disable_rx_intr
-                0x00000000400e3178       0x12 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
-                0x00000000400e3178                uart_disable_rx_intr
- *fill*         0x00000000400e318a        0x2 
+                0x00000000400e317c       0x12 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e317c                uart_disable_rx_intr
+ *fill*         0x00000000400e318e        0x2 
  .text.uart_disable_tx_intr
-                0x00000000400e318c       0x11 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
-                0x00000000400e318c                uart_disable_tx_intr
- *fill*         0x00000000400e319d        0x3 
+                0x00000000400e3190       0x11 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3190                uart_disable_tx_intr
+ *fill*         0x00000000400e31a1        0x3 
  .text.uart_enable_tx_intr
-                0x00000000400e31a0       0xb6 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e31a4       0xb6 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0xc2 (size before relaxing)
-                0x00000000400e31a0                uart_enable_tx_intr
- *fill*         0x00000000400e3256        0x2 
+                0x00000000400e31a4                uart_enable_tx_intr
+ *fill*         0x00000000400e325a        0x2 
  .text.uart_tx_all
-                0x00000000400e3258      0x138 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e325c      0x138 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x158 (size before relaxing)
  .text.uart_isr_register
-                0x00000000400e3390       0x82 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3394       0x82 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0x8e (size before relaxing)
-                0x00000000400e3390                uart_isr_register
- *fill*         0x00000000400e3412        0x2 
+                0x00000000400e3394                uart_isr_register
+ *fill*         0x00000000400e3416        0x2 
  .text.uart_set_pin
-                0x00000000400e3414      0x332 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3418      0x332 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x37a (size before relaxing)
-                0x00000000400e3414                uart_set_pin
- *fill*         0x00000000400e3746        0x2 
+                0x00000000400e3418                uart_set_pin
+ *fill*         0x00000000400e374a        0x2 
  .text.uart_set_tx_idle_num
-                0x00000000400e3748       0x95 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e374c       0x95 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0xa1 (size before relaxing)
-                0x00000000400e3748                uart_set_tx_idle_num
- *fill*         0x00000000400e37dd        0x3 
+                0x00000000400e374c                uart_set_tx_idle_num
+ *fill*         0x00000000400e37e1        0x3 
  .text.uart_param_config
-                0x00000000400e37e0       0xec /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e37e4       0xec /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x10c (size before relaxing)
-                0x00000000400e37e0                uart_param_config
+                0x00000000400e37e4                uart_param_config
  .text.uart_intr_config
-                0x00000000400e38cc      0x154 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e38d0      0x154 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x160 (size before relaxing)
-                0x00000000400e38cc                uart_intr_config
+                0x00000000400e38d0                uart_intr_config
  .text.uart_wait_tx_done
-                0x00000000400e3a20      0x121 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3a24      0x121 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x14d (size before relaxing)
-                0x00000000400e3a20                uart_wait_tx_done
- *fill*         0x00000000400e3b41        0x3 
+                0x00000000400e3a24                uart_wait_tx_done
+ *fill*         0x00000000400e3b45        0x3 
  .text.uart_write_bytes
-                0x00000000400e3b44       0x98 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3b48       0x98 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                          0xa4 (size before relaxing)
-                0x00000000400e3b44                uart_write_bytes
+                0x00000000400e3b48                uart_write_bytes
  .text.uart_read_bytes
-                0x00000000400e3bdc      0x1bd /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3be0      0x1bd /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x1ed (size before relaxing)
-                0x00000000400e3bdc                uart_read_bytes
- *fill*         0x00000000400e3d99        0x3 
+                0x00000000400e3be0                uart_read_bytes
+ *fill*         0x00000000400e3d9d        0x3 
  .text.uart_flush_input
-                0x00000000400e3d9c      0x19b /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3da0      0x19b /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x1df (size before relaxing)
-                0x00000000400e3d9c                uart_flush_input
-                0x00000000400e3d9c                uart_flush
- *fill*         0x00000000400e3f37        0x1 
+                0x00000000400e3da0                uart_flush_input
+                0x00000000400e3da0                uart_flush
+ *fill*         0x00000000400e3f3b        0x1 
  .text.uart_driver_delete
-                0x00000000400e3f38      0x1a4 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e3f3c      0x1a4 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x1c8 (size before relaxing)
-                0x00000000400e3f38                uart_driver_delete
+                0x00000000400e3f3c                uart_driver_delete
  .text.uart_driver_install
-                0x00000000400e40dc      0x276 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e40e0      0x276 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
                                         0x2be (size before relaxing)
-                0x00000000400e40dc                uart_driver_install
- *fill*         0x00000000400e4352        0x2 
+                0x00000000400e40e0                uart_driver_install
+ *fill*         0x00000000400e4356        0x2 
  .text.uart_set_select_notif_callback
-                0x00000000400e4354       0x16 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
-                0x00000000400e4354                uart_set_select_notif_callback
- *fill*         0x00000000400e436a        0x2 
+                0x00000000400e4358       0x16 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e4358                uart_set_select_notif_callback
+ *fill*         0x00000000400e436e        0x2 
  .text.uart_get_selectlock
-                0x00000000400e436c        0x8 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
-                0x00000000400e436c                uart_get_selectlock
+                0x00000000400e4370        0x8 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+                0x00000000400e4370                uart_get_selectlock
  .text.get_clk_en_mask
-                0x00000000400e4374       0xaf /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
- *fill*         0x00000000400e4423        0x1 
+                0x00000000400e4378       0xaf /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+ *fill*         0x00000000400e4427        0x1 
  .text.get_rst_en_mask
-                0x00000000400e4424       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
- *fill*         0x00000000400e44bd        0x3 
+                0x00000000400e4428       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+ *fill*         0x00000000400e44c1        0x3 
  .text.get_clk_en_reg
-                0x00000000400e44c0       0x15 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400e44c4       0x15 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
                                          0x19 (size before relaxing)
- *fill*         0x00000000400e44d5        0x3 
+ *fill*         0x00000000400e44d9        0x3 
  .text.get_rst_en_reg
-                0x00000000400e44d8       0x15 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400e44dc       0x15 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
                                          0x19 (size before relaxing)
- *fill*         0x00000000400e44ed        0x3 
+ *fill*         0x00000000400e44f1        0x3 
  .text.periph_module_enable
-                0x00000000400e44f0       0x4a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400e44f4       0x4a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
                                          0x62 (size before relaxing)
-                0x00000000400e44f0                periph_module_enable
- *fill*         0x00000000400e453a        0x2 
+                0x00000000400e44f4                periph_module_enable
+ *fill*         0x00000000400e453e        0x2 
  .text.periph_module_disable
-                0x00000000400e453c       0x4a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400e4540       0x4a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
                                          0x62 (size before relaxing)
-                0x00000000400e453c                periph_module_disable
- *fill*         0x00000000400e4586        0x2 
+                0x00000000400e4540                periph_module_disable
+ *fill*         0x00000000400e458a        0x2 
  .text.gpio_output_disable
-                0x00000000400e4588       0xa4 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e458c       0xa4 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                          0xac (size before relaxing)
  .text.gpio_output_enable
-                0x00000000400e462c       0x8a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e4630       0x8a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                          0x8e (size before relaxing)
- *fill*         0x00000000400e46b6        0x2 
+ *fill*         0x00000000400e46ba        0x2 
  .text.gpio_pullup_en
-                0x00000000400e46b8       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e46bc       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                          0x9d (size before relaxing)
-                0x00000000400e46b8                gpio_pullup_en
- *fill*         0x00000000400e4751        0x3 
+                0x00000000400e46bc                gpio_pullup_en
+ *fill*         0x00000000400e4755        0x3 
  .text.gpio_pullup_dis
-                0x00000000400e4754       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e4758       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                          0x9d (size before relaxing)
-                0x00000000400e4754                gpio_pullup_dis
- *fill*         0x00000000400e47ed        0x3 
+                0x00000000400e4758                gpio_pullup_dis
+ *fill*         0x00000000400e47f1        0x3 
  .text.gpio_pulldown_en
-                0x00000000400e47f0       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e47f4       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                          0x9d (size before relaxing)
-                0x00000000400e47f0                gpio_pulldown_en
- *fill*         0x00000000400e4889        0x3 
+                0x00000000400e47f4                gpio_pulldown_en
+ *fill*         0x00000000400e488d        0x3 
  .text.gpio_pulldown_dis
-                0x00000000400e488c       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e4890       0x99 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                          0x9d (size before relaxing)
-                0x00000000400e488c                gpio_pulldown_dis
- *fill*         0x00000000400e4925        0x3 
+                0x00000000400e4890                gpio_pulldown_dis
+ *fill*         0x00000000400e4929        0x3 
  .text.gpio_set_level
-                0x00000000400e4928       0xbd /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e492c       0xbd /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                          0xc1 (size before relaxing)
-                0x00000000400e4928                gpio_set_level
- *fill*         0x00000000400e49e5        0x3 
+                0x00000000400e492c                gpio_set_level
+ *fill*         0x00000000400e49e9        0x3 
  .text.gpio_set_pull_mode
-                0x00000000400e49e8       0xd1 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e49ec       0xd1 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                          0xf1 (size before relaxing)
-                0x00000000400e49e8                gpio_set_pull_mode
- *fill*         0x00000000400e4ab9        0x3 
+                0x00000000400e49ec                gpio_set_pull_mode
+ *fill*         0x00000000400e4abd        0x3 
  .text.gpio_set_direction
-                0x00000000400e4abc      0x160 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+                0x00000000400e4ac0      0x160 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
                                         0x178 (size before relaxing)
-                0x00000000400e4abc                gpio_set_direction
+                0x00000000400e4ac0                gpio_set_direction
  .text.timer_group_intr_enable
-                0x00000000400e4c1c       0x58 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(timer.o)
+                0x00000000400e4c20       0x58 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(timer.o)
                                          0x64 (size before relaxing)
-                0x00000000400e4c1c                timer_group_intr_enable
+                0x00000000400e4c20                timer_group_intr_enable
  .text.mcpwm_gpio_init
-                0x00000000400e4c74      0x1cd /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+                0x00000000400e4c78      0x1cd /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
                                         0x1f9 (size before relaxing)
-                0x00000000400e4c74                mcpwm_gpio_init
- *fill*         0x00000000400e4e41        0x3 
+                0x00000000400e4c78                mcpwm_gpio_init
+ *fill*         0x00000000400e4e45        0x3 
  .text.mcpwm_start
-                0x00000000400e4e44       0x91 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+                0x00000000400e4e48       0x91 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
                                          0xa1 (size before relaxing)
-                0x00000000400e4e44                mcpwm_start
- *fill*         0x00000000400e4ed5        0x3 
+                0x00000000400e4e48                mcpwm_start
+ *fill*         0x00000000400e4ed9        0x3 
  .text.mcpwm_set_frequency
-                0x00000000400e4ed8      0x149 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+                0x00000000400e4edc      0x149 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
                                         0x159 (size before relaxing)
-                0x00000000400e4ed8                mcpwm_set_frequency
- *fill*         0x00000000400e5021        0x3 
+                0x00000000400e4edc                mcpwm_set_frequency
+ *fill*         0x00000000400e5025        0x3 
  .text.mcpwm_set_duty
-                0x00000000400e5024      0x12e /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+                0x00000000400e5028      0x12e /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
                                         0x14a (size before relaxing)
-                0x00000000400e5024                mcpwm_set_duty
- *fill*         0x00000000400e5152        0x2 
+                0x00000000400e5028                mcpwm_set_duty
+ *fill*         0x00000000400e5156        0x2 
  .text.mcpwm_set_duty_in_us
-                0x00000000400e5154      0x104 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+                0x00000000400e5158      0x104 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
                                         0x11c (size before relaxing)
-                0x00000000400e5154                mcpwm_set_duty_in_us
+                0x00000000400e5158                mcpwm_set_duty_in_us
  .text.mcpwm_set_duty_type
-                0x00000000400e5258      0x55e /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+                0x00000000400e525c      0x55e /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
                                         0x57d (size before relaxing)
-                0x00000000400e5258                mcpwm_set_duty_type
- *fill*         0x00000000400e57b6        0x2 
+                0x00000000400e525c                mcpwm_set_duty_type
+ *fill*         0x00000000400e57ba        0x2 
  .text.mcpwm_init
-                0x00000000400e57b8      0x159 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+                0x00000000400e57bc      0x159 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
                                         0x181 (size before relaxing)
-                0x00000000400e57b8                mcpwm_init
- *fill*         0x00000000400e5911        0x3 
+                0x00000000400e57bc                mcpwm_init
+ *fill*         0x00000000400e5915        0x3 
  .text.i2c_hw_disable
-                0x00000000400e5914       0x1c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e5918       0x1c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x20 (size before relaxing)
  .text.i2c_hw_enable
-                0x00000000400e5930       0x19 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e5934       0x19 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x20 (size before relaxing)
- *fill*         0x00000000400e5949        0x3 
+ *fill*         0x00000000400e594d        0x3 
  .text.i2c_cmd_link_append
-                0x00000000400e594c       0x78 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e5950       0x78 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x80 (size before relaxing)
  .text.i2c_reset_tx_fifo
-                0x00000000400e59c4       0x70 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e59c8       0x70 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x78 (size before relaxing)
-                0x00000000400e59c4                i2c_reset_tx_fifo
+                0x00000000400e59c8                i2c_reset_tx_fifo
  .text.i2c_reset_rx_fifo
-                0x00000000400e5a34       0x70 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e5a38       0x70 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x78 (size before relaxing)
-                0x00000000400e5a34                i2c_reset_rx_fifo
+                0x00000000400e5a38                i2c_reset_rx_fifo
  .text.i2c_set_data_mode
-                0x00000000400e5aa4       0xdc /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e5aa8       0xdc /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0xf4 (size before relaxing)
-                0x00000000400e5aa4                i2c_set_data_mode
+                0x00000000400e5aa8                i2c_set_data_mode
  .text.i2c_isr_register
-                0x00000000400e5b80       0x8c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e5b84       0x8c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x94 (size before relaxing)
-                0x00000000400e5b80                i2c_isr_register
+                0x00000000400e5b84                i2c_isr_register
  .text.i2c_driver_install
-                0x00000000400e5c0c      0x2bb /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e5c10      0x2bb /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                         0x2fe (size before relaxing)
-                0x00000000400e5c0c                i2c_driver_install
- *fill*         0x00000000400e5ec7        0x1 
+                0x00000000400e5c10                i2c_driver_install
+ *fill*         0x00000000400e5ecb        0x1 
  .text.i2c_set_pin
-                0x00000000400e5ec8      0x2d2 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e5ecc      0x2d2 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                         0x30e (size before relaxing)
-                0x00000000400e5ec8                i2c_set_pin
- *fill*         0x00000000400e619a        0x2 
+                0x00000000400e5ecc                i2c_set_pin
+ *fill*         0x00000000400e619e        0x2 
  .text.i2c_param_config
-                0x00000000400e619c      0x2dc /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e61a0      0x2dc /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                         0x2f4 (size before relaxing)
-                0x00000000400e619c                i2c_param_config
+                0x00000000400e61a0                i2c_param_config
  .text.i2c_master_clear_bus
-                0x00000000400e6478      0x13c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e647c      0x13c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                         0x168 (size before relaxing)
  .text.i2c_cmd_link_create
-                0x00000000400e65b4       0x11 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
-                0x00000000400e65b4                i2c_cmd_link_create
- *fill*         0x00000000400e65c5        0x3 
+                0x00000000400e65b8       0x11 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e65b8                i2c_cmd_link_create
+ *fill*         0x00000000400e65c9        0x3 
  .text.i2c_cmd_link_delete
-                0x00000000400e65c8       0x2a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
-                0x00000000400e65c8                i2c_cmd_link_delete
- *fill*         0x00000000400e65f2        0x2 
+                0x00000000400e65cc       0x2a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e65cc                i2c_cmd_link_delete
+ *fill*         0x00000000400e65f6        0x2 
  .text.i2c_master_start
-                0x00000000400e65f4       0x54 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e65f8       0x54 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x58 (size before relaxing)
-                0x00000000400e65f4                i2c_master_start
+                0x00000000400e65f8                i2c_master_start
  .text.i2c_master_stop
-                0x00000000400e6648       0x56 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e664c       0x56 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x5a (size before relaxing)
-                0x00000000400e6648                i2c_master_stop
- *fill*         0x00000000400e669e        0x2 
+                0x00000000400e664c                i2c_master_stop
+ *fill*         0x00000000400e66a2        0x2 
  .text.i2c_master_write_byte
-                0x00000000400e66a0       0x62 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e66a4       0x62 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                          0x66 (size before relaxing)
-                0x00000000400e66a0                i2c_master_write_byte
- *fill*         0x00000000400e6702        0x2 
+                0x00000000400e66a4                i2c_master_write_byte
+ *fill*         0x00000000400e6706        0x2 
  .text.i2c_master_cmd_begin
-                0x00000000400e6704      0x219 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+                0x00000000400e6708      0x219 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
                                         0x24d (size before relaxing)
-                0x00000000400e6704                i2c_master_cmd_begin
- *fill*         0x00000000400e691d        0x3 
- .text.rtc_isr  0x00000000400e6920       0x4a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e6708                i2c_master_cmd_begin
+ *fill*         0x00000000400e6921        0x3 
+ .text.rtc_isr  0x00000000400e6924       0x4a /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
                                          0x56 (size before relaxing)
- *fill*         0x00000000400e696a        0x2 
+ *fill*         0x00000000400e696e        0x2 
  .text.rtc_isr_ensure_installed
-                0x00000000400e696c       0x43 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e6970       0x43 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
                                          0x4a (size before relaxing)
- *fill*         0x00000000400e69af        0x1 
+ *fill*         0x00000000400e69b3        0x1 
  .text.rtc_gpio_pullup_en
-                0x00000000400e69b0       0x8d /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e69b4       0x8d /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
                                          0x9d (size before relaxing)
-                0x00000000400e69b0                rtc_gpio_pullup_en
- *fill*         0x00000000400e6a3d        0x3 
+                0x00000000400e69b4                rtc_gpio_pullup_en
+ *fill*         0x00000000400e6a41        0x3 
  .text.rtc_gpio_pulldown_en
-                0x00000000400e6a40       0x8d /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e6a44       0x8d /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
                                          0x9d (size before relaxing)
-                0x00000000400e6a40                rtc_gpio_pulldown_en
- *fill*         0x00000000400e6acd        0x3 
+                0x00000000400e6a44                rtc_gpio_pulldown_en
+ *fill*         0x00000000400e6ad1        0x3 
  .text.rtc_gpio_pullup_dis
-                0x00000000400e6ad0       0x95 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e6ad4       0x95 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
                                          0xa1 (size before relaxing)
-                0x00000000400e6ad0                rtc_gpio_pullup_dis
- *fill*         0x00000000400e6b65        0x3 
+                0x00000000400e6ad4                rtc_gpio_pullup_dis
+ *fill*         0x00000000400e6b69        0x3 
  .text.rtc_gpio_pulldown_dis
-                0x00000000400e6b68       0x95 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e6b6c       0x95 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
                                          0xa1 (size before relaxing)
-                0x00000000400e6b68                rtc_gpio_pulldown_dis
- *fill*         0x00000000400e6bfd        0x3 
+                0x00000000400e6b6c                rtc_gpio_pulldown_dis
+ *fill*         0x00000000400e6c01        0x3 
  .text.rtc_gpio_force_hold_dis_all
-                0x00000000400e6c00       0x39 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
-                0x00000000400e6c00                rtc_gpio_force_hold_dis_all
- *fill*         0x00000000400e6c39        0x3 
+                0x00000000400e6c04       0x39 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e6c04                rtc_gpio_force_hold_dis_all
+ *fill*         0x00000000400e6c3d        0x3 
  .text.rtc_isr_register
-                0x00000000400e6c3c       0x41 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e6c40       0x41 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
                                          0x49 (size before relaxing)
-                0x00000000400e6c3c                rtc_isr_register
- *fill*         0x00000000400e6c7d        0x3 
- .text          0x00000000400e6c80        0xa /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
+                0x00000000400e6c40                rtc_isr_register
+ *fill*         0x00000000400e6c81        0x3 
+ .text          0x00000000400e6c84        0xa /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
                                           0xd (size before relaxing)
-                0x00000000400e6c80                __errno
- *fill*         0x00000000400e6c8a        0x2 
+                0x00000000400e6c84                __errno
+ *fill*         0x00000000400e6c8e        0x2 
  .text.iterator_create
-                0x00000000400e6c8c       0x21 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
- *fill*         0x00000000400e6cad        0x3 
+                0x00000000400e6c90       0x21 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
+ *fill*         0x00000000400e6cb1        0x3 
  .text.load_partitions
-                0x00000000400e6cb0       0xd5 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
- *fill*         0x00000000400e6d85        0x3 
+                0x00000000400e6cb4       0xd5 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
+ *fill*         0x00000000400e6d89        0x3 
  .text.esp_partition_iterator_release
-                0x00000000400e6d88        0xe /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
-                0x00000000400e6d88                esp_partition_iterator_release
- *fill*         0x00000000400e6d96        0x2 
+                0x00000000400e6d8c        0xe /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400e6d8c                esp_partition_iterator_release
+ *fill*         0x00000000400e6d9a        0x2 
  .text.esp_partition_next
-                0x00000000400e6d98       0x7a /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400e6d9c       0x7a /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
                                          0x82 (size before relaxing)
-                0x00000000400e6d98                esp_partition_next
- *fill*         0x00000000400e6e12        0x2 
+                0x00000000400e6d9c                esp_partition_next
+ *fill*         0x00000000400e6e16        0x2 
  .text.esp_partition_find
-                0x00000000400e6e14       0x42 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400e6e18       0x42 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
                                          0x4e (size before relaxing)
-                0x00000000400e6e14                esp_partition_find
- *fill*         0x00000000400e6e56        0x2 
+                0x00000000400e6e18                esp_partition_find
+ *fill*         0x00000000400e6e5a        0x2 
  .text.esp_partition_get
-                0x00000000400e6e58       0x19 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400e6e5c       0x19 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
                                          0x1c (size before relaxing)
-                0x00000000400e6e58                esp_partition_get
- *fill*         0x00000000400e6e71        0x3 
+                0x00000000400e6e5c                esp_partition_get
+ *fill*         0x00000000400e6e75        0x3 
  .text.__cxa_guard_dummy
-                0x00000000400e6e74        0x5 /home/david/EC444/EC444_Quest1/servo_v0/build/cxx/libcxx.a(cxx_guards.o)
-                0x00000000400e6e74                __cxa_guard_dummy
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x0 
- *fill*         0x00000000400e6e79        0x3 
+                0x00000000400e6e78        0x5 /home/david/EC444/EC444_Quest1/servo_v0/build/cxx/libcxx.a(cxx_guards.o)
+                0x00000000400e6e78                __cxa_guard_dummy
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x0 
+ *fill*         0x00000000400e6e7d        0x3 
  .text.esp_vApplicationWaitiHook
-                0x00000000400e6e7c        0x8 /home/david/EC444/EC444_Quest1/servo_v0/build/esp32/libesp32.a(freertos_hooks.o)
-                0x00000000400e6e7c                esp_vApplicationWaitiHook
- *fill*         0x00000000400e6e84        0x0 
- *fill*         0x00000000400e6e84        0x0 
- *fill*         0x00000000400e6e84        0x0 
+                0x00000000400e6e80        0x8 /home/david/EC444/EC444_Quest1/servo_v0/build/esp32/libesp32.a(freertos_hooks.o)
+                0x00000000400e6e80                esp_vApplicationWaitiHook
+ *fill*         0x00000000400e6e88        0x0 
+ *fill*         0x00000000400e6e88        0x0 
+ *fill*         0x00000000400e6e88        0x0 
  .text.heap_caps_match
-                0x00000000400e6e84       0x34 /home/david/EC444/EC444_Quest1/servo_v0/build/heap/libheap.a(heap_caps.o)
-                0x00000000400e6e84                heap_caps_match
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
- *fill*         0x00000000400e6eb8        0x0 
+                0x00000000400e6e88       0x34 /home/david/EC444/EC444_Quest1/servo_v0/build/heap/libheap.a(heap_caps.o)
+                0x00000000400e6e88                heap_caps_match
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
+ *fill*         0x00000000400e6ebc        0x0 
  .text._system_r
-                0x00000000400e6eb8        0xb /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
-                0x00000000400e6eb8                _system_r
- *fill*         0x00000000400e6ec3        0x0 
- *fill*         0x00000000400e6ec3        0x0 
- *fill*         0x00000000400e6ec3        0x1 
+                0x00000000400e6ebc        0xb /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400e6ebc                _system_r
+ *fill*         0x00000000400e6ec7        0x0 
+ *fill*         0x00000000400e6ec7        0x0 
+ *fill*         0x00000000400e6ec7        0x1 
  .text._getpid_r
-                0x00000000400e6ec4        0xb /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
-                0x00000000400e6ec4                _getpid_r
- *fill*         0x00000000400e6ecf        0x1 
- .text._kill_r  0x00000000400e6ed0        0xb /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
-                0x00000000400e6ed0                _kill_r
- *fill*         0x00000000400e6edb        0x0 
- *fill*         0x00000000400e6edb        0x0 
- *fill*         0x00000000400e6edb        0x0 
- *fill*         0x00000000400e6edb        0x0 
- *fill*         0x00000000400e6edb        0x0 
- *fill*         0x00000000400e6edb        0x0 
- *fill*         0x00000000400e6edb        0x0 
- *fill*         0x00000000400e6edb        0x0 
- *fill*         0x00000000400e6edb        0x1 
+                0x00000000400e6ec8        0xb /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400e6ec8                _getpid_r
+ *fill*         0x00000000400e6ed3        0x1 
+ .text._kill_r  0x00000000400e6ed4        0xb /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400e6ed4                _kill_r
+ *fill*         0x00000000400e6edf        0x0 
+ *fill*         0x00000000400e6edf        0x0 
+ *fill*         0x00000000400e6edf        0x0 
+ *fill*         0x00000000400e6edf        0x0 
+ *fill*         0x00000000400e6edf        0x0 
+ *fill*         0x00000000400e6edf        0x0 
+ *fill*         0x00000000400e6edf        0x0 
+ *fill*         0x00000000400e6edf        0x0 
+ *fill*         0x00000000400e6edf        0x1 
  .text.s_compare_reserved_regions
-                0x00000000400e6edc        0xc /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
- *fill*         0x00000000400e6ee8        0x0 
+                0x00000000400e6ee0        0xc /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
+ *fill*         0x00000000400e6eec        0x0 
  .text.uart_find_pattern_from_last
-                0x00000000400e6ee8       0x24 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
- *fill*         0x00000000400e6f0c        0x0 
+                0x00000000400e6eec       0x24 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
+ *fill*         0x00000000400e6f10        0x0 
  .text.is_wifi_clk_peripheral
-                0x00000000400e6f0c       0x1c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
- *fill*         0x00000000400e6f28        0x0 
+                0x00000000400e6f10       0x1c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
+ *fill*         0x00000000400e6f2c        0x0 
  *(.irom0.text)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x00000000400e6f28                _text_end = ABSOLUTE (.)
-                0x00000000400e6f28                _etext = .
+                0x00000000400e6f2c                _text_end = ABSOLUTE (.)
+                0x00000000400e6f2c                _etext = .
                 0x0000000000000000                _flash_cache_start = 0x0
                 [!provide]                        PROVIDE (abort, 0x4000bba4)
                 [!provide]                        PROVIDE (Add2SelfBigHex256, 0x40015b7c)
@@ -11123,7 +11123,7 @@ OUTPUT(/home/david/EC444/EC444_Quest1/servo_v0/build/i2c.elf elf32-xtensa-le)
  .debug_abbrev  0x000000000000f045      0x17b /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .debug_abbrev  0x000000000000f1c0      0x186 /home/david/EC444/EC444_Quest1/servo_v0/build/wpa_supplicant/libwpa_supplicant.a(md5-internal.o)
 
-.debug_loc      0x0000000000000000    0x365b3
+.debug_loc      0x0000000000000000    0x365a0
  .debug_loc     0x0000000000000000      0x234 /home/david/EC444/EC444_Quest1/servo_v0/build/cxx/libcxx.a(cxx_guards.o)
  .debug_loc     0x0000000000000234      0x47d /home/david/EC444/EC444_Quest1/servo_v0/build/esp32/libesp32.a(panic.o)
  .debug_loc     0x00000000000006b1      0x44b /home/david/EC444/EC444_Quest1/servo_v0/build/esp32/libesp32.a(system_api.o)
@@ -11152,73 +11152,73 @@ OUTPUT(/home/david/EC444/EC444_Quest1/servo_v0/build/i2c.elf elf32-xtensa-le)
  .debug_loc     0x0000000000007989      0xa17 /home/david/EC444/EC444_Quest1/servo_v0/build/heap/libheap.a(heap_caps.o)
  .debug_loc     0x00000000000083a0     0x2dcb /home/david/EC444/EC444_Quest1/servo_v0/build/heap/libheap.a(multi_heap.o)
  .debug_loc     0x000000000000b16b      0x89c /home/david/EC444/EC444_Quest1/servo_v0/build/log/liblog.a(log.o)
- .debug_loc     0x000000000000ba07      0x689 /home/david/EC444/EC444_Quest1/servo_v0/build/main/libmain.a(i2c_example_main.o)
- .debug_loc     0x000000000000c090       0x21 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
- .debug_loc     0x000000000000c0b1       0x1e /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-clock.o)
- .debug_loc     0x000000000000c0cf       0x42 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
- .debug_loc     0x000000000000c111       0xe4 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
- .debug_loc     0x000000000000c1f5       0x81 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
- .debug_loc     0x000000000000c276       0x76 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
- .debug_loc     0x000000000000c2ec      0x322 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
- .debug_loc     0x000000000000c60e       0x42 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
- .debug_loc     0x000000000000c650       0x42 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
- .debug_loc     0x000000000000c692       0x9b /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
- .debug_loc     0x000000000000c72d       0x3c /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
- .debug_loc     0x000000000000c769      0x171 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
- .debug_loc     0x000000000000c8da       0x89 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
- .debug_loc     0x000000000000c963     0x3da2 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
- .debug_loc     0x0000000000010705     0x221f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
- .debug_loc     0x0000000000012924     0x3f32 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
- .debug_loc     0x0000000000016856       0x42 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
- .debug_loc     0x0000000000016898       0xa7 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-xpg_strerror_r.o)
- .debug_loc     0x000000000001693f     0x159b /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
- .debug_loc     0x0000000000017eda      0x10f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
- .debug_loc     0x0000000000017fe9     0x14fb /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
- .debug_loc     0x00000000000194e4      0x138 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
- .debug_loc     0x000000000001961c       0xc8 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
- .debug_loc     0x00000000000196e4      0xd82 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-strerror.o)
- .debug_loc     0x000000000001a466     0x2434 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
- .debug_loc     0x000000000001c89a       0x21 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-u_strerr.o)
- .debug_loc     0x000000000001c8bb       0x59 /home/david/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
- .debug_loc     0x000000000001c914      0x57e /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
- .debug_loc     0x000000000001ce92      0x10d /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
- .debug_loc     0x000000000001cf9f      0x1fa /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(locks.o)
- .debug_loc     0x000000000001d199      0xc14 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread.o)
- .debug_loc     0x000000000001ddad      0x3f5 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
- .debug_loc     0x000000000001e1a2       0x13 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(cpu_util.o)
- .debug_loc     0x000000000001e1b5      0x2e5 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_wdt.o)
- .debug_loc     0x000000000001e49a      0x245 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_init.o)
- .debug_loc     0x000000000001e6df      0x256 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_time.o)
- .debug_loc     0x000000000001e935      0xb94 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_clk.o)
- .debug_loc     0x000000000001f4c9      0x30e /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
- .debug_loc     0x000000000001f7d7      0x289 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
- .debug_loc     0x000000000001fa60      0xa82 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_ops.o)
- .debug_loc     0x00000000000204e2      0xeb0 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_mmap.o)
- .debug_loc     0x0000000000021392      0xa78 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_loc     0x0000000000021e0a      0xe83 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
- .debug_loc     0x0000000000022c8d     0x2a1e /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
- .debug_loc     0x00000000000256ab       0x21 /home/david/EC444/EC444_Quest1/servo_v0/build/xtensa-debug-module/libxtensa-debug-module.a(eri.o)
- .debug_loc     0x00000000000256cc      0x851 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdi3.o)
- .debug_loc     0x0000000000025f1d      0x750 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_moddi3.o)
- .debug_loc     0x000000000002666d      0x9e8 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .debug_loc     0x0000000000027055      0x950 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
- .debug_loc     0x00000000000279a5      0x906 /home/david/EC444/EC444_Quest1/servo_v0/build/app_update/libapp_update.a(esp_ota_ops.o)
- .debug_loc     0x00000000000282ab      0xc8b /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_loc     0x0000000000028f36      0x11f /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_loc     0x0000000000029055      0x1ec /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_loc     0x0000000000029241     0x21c9 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
- .debug_loc     0x000000000002b40a      0x144 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
- .debug_loc     0x000000000002b54e      0xf1c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
- .debug_loc     0x000000000002c46a      0xa6c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(timer.o)
- .debug_loc     0x000000000002ced6     0x1a33 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
- .debug_loc     0x000000000002e909     0x1ad2 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
- .debug_loc     0x00000000000303db     0x2933 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
- .debug_loc     0x0000000000032d0e     0x1804 /home/david/EC444/EC444_Quest1/servo_v0/build/freertos/libfreertos.a(ringbuf.o)
- .debug_loc     0x0000000000034512     0x1021 /home/david/EC444/EC444_Quest1/servo_v0/build/mbedtls/libmbedtls.a(sha256.o)
- .debug_loc     0x0000000000035533      0x645 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
- .debug_loc     0x0000000000035b78      0x405 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_loc     0x0000000000035f7d      0x1b6 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_loc     0x0000000000036133      0x480 /home/david/EC444/EC444_Quest1/servo_v0/build/wpa_supplicant/libwpa_supplicant.a(md5-internal.o)
+ .debug_loc     0x000000000000ba07      0x676 /home/david/EC444/EC444_Quest1/servo_v0/build/main/libmain.a(i2c_example_main.o)
+ .debug_loc     0x000000000000c07d       0x21 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+ .debug_loc     0x000000000000c09e       0x1e /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-clock.o)
+ .debug_loc     0x000000000000c0bc       0x42 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+ .debug_loc     0x000000000000c0fe       0xe4 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
+ .debug_loc     0x000000000000c1e2       0x81 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
+ .debug_loc     0x000000000000c263       0x76 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
+ .debug_loc     0x000000000000c2d9      0x322 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
+ .debug_loc     0x000000000000c5fb       0x42 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
+ .debug_loc     0x000000000000c63d       0x42 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
+ .debug_loc     0x000000000000c67f       0x9b /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
+ .debug_loc     0x000000000000c71a       0x3c /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
+ .debug_loc     0x000000000000c756      0x171 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
+ .debug_loc     0x000000000000c8c7       0x89 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
+ .debug_loc     0x000000000000c950     0x3da2 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+ .debug_loc     0x00000000000106f2     0x221f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_loc     0x0000000000012911     0x3f32 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+ .debug_loc     0x0000000000016843       0x42 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
+ .debug_loc     0x0000000000016885       0xa7 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-xpg_strerror_r.o)
+ .debug_loc     0x000000000001692c     0x159b /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+ .debug_loc     0x0000000000017ec7      0x10f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
+ .debug_loc     0x0000000000017fd6     0x14fb /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
+ .debug_loc     0x00000000000194d1      0x138 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
+ .debug_loc     0x0000000000019609       0xc8 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
+ .debug_loc     0x00000000000196d1      0xd82 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-strerror.o)
+ .debug_loc     0x000000000001a453     0x2434 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_loc     0x000000000001c887       0x21 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-u_strerr.o)
+ .debug_loc     0x000000000001c8a8       0x59 /home/david/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
+ .debug_loc     0x000000000001c901      0x57e /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+ .debug_loc     0x000000000001ce7f      0x10d /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
+ .debug_loc     0x000000000001cf8c      0x1fa /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(locks.o)
+ .debug_loc     0x000000000001d186      0xc14 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread.o)
+ .debug_loc     0x000000000001dd9a      0x3f5 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
+ .debug_loc     0x000000000001e18f       0x13 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(cpu_util.o)
+ .debug_loc     0x000000000001e1a2      0x2e5 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_wdt.o)
+ .debug_loc     0x000000000001e487      0x245 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_init.o)
+ .debug_loc     0x000000000001e6cc      0x256 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_time.o)
+ .debug_loc     0x000000000001e922      0xb94 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_clk.o)
+ .debug_loc     0x000000000001f4b6      0x30e /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
+ .debug_loc     0x000000000001f7c4      0x289 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
+ .debug_loc     0x000000000001fa4d      0xa82 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_ops.o)
+ .debug_loc     0x00000000000204cf      0xeb0 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_mmap.o)
+ .debug_loc     0x000000000002137f      0xa78 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_loc     0x0000000000021df7      0xe83 /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+ .debug_loc     0x0000000000022c7a     0x2a1e /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+ .debug_loc     0x0000000000025698       0x21 /home/david/EC444/EC444_Quest1/servo_v0/build/xtensa-debug-module/libxtensa-debug-module.a(eri.o)
+ .debug_loc     0x00000000000256b9      0x851 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdi3.o)
+ .debug_loc     0x0000000000025f0a      0x750 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_moddi3.o)
+ .debug_loc     0x000000000002665a      0x9e8 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_loc     0x0000000000027042      0x950 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
+ .debug_loc     0x0000000000027992      0x906 /home/david/EC444/EC444_Quest1/servo_v0/build/app_update/libapp_update.a(esp_ota_ops.o)
+ .debug_loc     0x0000000000028298      0xc8b /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_loc     0x0000000000028f23      0x11f /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_loc     0x0000000000029042      0x1ec /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_loc     0x000000000002922e     0x21c9 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+ .debug_loc     0x000000000002b3f7      0x144 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+ .debug_loc     0x000000000002b53b      0xf1c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+ .debug_loc     0x000000000002c457      0xa6c /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(timer.o)
+ .debug_loc     0x000000000002cec3     0x1a33 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+ .debug_loc     0x000000000002e8f6     0x1ad2 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+ .debug_loc     0x00000000000303c8     0x2933 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+ .debug_loc     0x0000000000032cfb     0x1804 /home/david/EC444/EC444_Quest1/servo_v0/build/freertos/libfreertos.a(ringbuf.o)
+ .debug_loc     0x00000000000344ff     0x1021 /home/david/EC444/EC444_Quest1/servo_v0/build/mbedtls/libmbedtls.a(sha256.o)
+ .debug_loc     0x0000000000035520      0x645 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
+ .debug_loc     0x0000000000035b65      0x405 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_loc     0x0000000000035f6a      0x1b6 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_loc     0x0000000000036120      0x480 /home/david/EC444/EC444_Quest1/servo_v0/build/wpa_supplicant/libwpa_supplicant.a(md5-internal.o)
 
 .debug_aranges  0x0000000000000000     0x2fd8
  .debug_aranges
@@ -11554,7 +11554,7 @@ OUTPUT(/home/david/EC444/EC444_Quest1/servo_v0/build/i2c.elf elf32-xtensa-le)
  .debug_ranges  0x0000000000002fa0       0x58 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .debug_ranges  0x0000000000002ff8       0x30 /home/david/EC444/EC444_Quest1/servo_v0/build/wpa_supplicant/libwpa_supplicant.a(md5-internal.o)
 
-.debug_line     0x0000000000000000    0x3b802
+.debug_line     0x0000000000000000    0x3b7fe
  .debug_line    0x0000000000000000      0x881 /home/david/EC444/EC444_Quest1/servo_v0/build/cxx/libcxx.a(cxx_guards.o)
  .debug_line    0x0000000000000881      0x2f9 /home/david/EC444/EC444_Quest1/servo_v0/build/cxx/libcxx.a(cxx_exception_stubs.o)
  .debug_line    0x0000000000000b7a      0xaaa /home/david/EC444/EC444_Quest1/servo_v0/build/esp32/libesp32.a(panic.o)
@@ -11593,93 +11593,93 @@ OUTPUT(/home/david/EC444/EC444_Quest1/servo_v0/build/i2c.elf elf32-xtensa-le)
  .debug_line    0x000000000000d7d2      0x9f3 /home/david/EC444/EC444_Quest1/servo_v0/build/heap/libheap.a(heap_caps.o)
  .debug_line    0x000000000000e1c5     0x123e /home/david/EC444/EC444_Quest1/servo_v0/build/heap/libheap.a(multi_heap.o)
  .debug_line    0x000000000000f403      0x84e /home/david/EC444/EC444_Quest1/servo_v0/build/log/liblog.a(log.o)
- .debug_line    0x000000000000fc51      0x956 /home/david/EC444/EC444_Quest1/servo_v0/build/main/libmain.a(i2c_example_main.o)
- .debug_line    0x00000000000105a7      0x150 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
- .debug_line    0x00000000000106f7      0x13f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-clock.o)
- .debug_line    0x0000000000010836      0x25c /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
- .debug_line    0x0000000000010a92      0x2d6 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
- .debug_line    0x0000000000010d68      0x301 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
- .debug_line    0x0000000000011069      0x216 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
- .debug_line    0x000000000001127f      0x5e6 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
- .debug_line    0x0000000000011865      0x2b0 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
- .debug_line    0x0000000000011b15      0x250 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
- .debug_line    0x0000000000011d65      0x2dc /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
- .debug_line    0x0000000000012041      0x2ec /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
- .debug_line    0x000000000001232d      0x315 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
- .debug_line    0x0000000000012642      0x2c7 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
- .debug_line    0x0000000000012909     0x2e07 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
- .debug_line    0x0000000000015710     0x2539 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
- .debug_line    0x0000000000017c49     0x2fc4 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
- .debug_line    0x000000000001ac0d      0x275 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
- .debug_line    0x000000000001ae82      0x1d7 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-xpg_strerror_r.o)
- .debug_line    0x000000000001b059      0xfde /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
- .debug_line    0x000000000001c037      0x234 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
- .debug_line    0x000000000001c26b      0xdbc /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
- .debug_line    0x000000000001d027      0x2e1 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
- .debug_line    0x000000000001d308      0x1e6 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
- .debug_line    0x000000000001d4ee      0x5e3 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-strerror.o)
- .debug_line    0x000000000001dad1     0x244f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
- .debug_line    0x000000000001ff20       0x60 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-u_strerr.o)
- .debug_line    0x000000000001ff80      0x179 /home/david/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
- .debug_line    0x00000000000200f9      0x7e6 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
- .debug_line    0x00000000000208df      0x14e /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(reent_init.o)
- .debug_line    0x0000000000020a2d      0x281 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
- .debug_line    0x0000000000020cae      0x229 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscall_table.o)
- .debug_line    0x0000000000020ed7      0x3c6 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(locks.o)
- .debug_line    0x000000000002129d      0xb94 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread.o)
- .debug_line    0x0000000000021e31      0x4b3 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
- .debug_line    0x00000000000222e4      0x178 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(cpu_util.o)
- .debug_line    0x000000000002245c      0x42c /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_wdt.o)
- .debug_line    0x0000000000022888      0x18b /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(soc_memory_layout.o)
- .debug_line    0x0000000000022a13      0x3fd /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_init.o)
- .debug_line    0x0000000000022e10      0x3c8 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_time.o)
- .debug_line    0x00000000000231d8      0xd02 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x0000000000023eda      0x476 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
- .debug_line    0x0000000000024350      0x564 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
- .debug_line    0x00000000000248b4      0x9f2 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_ops.o)
- .debug_line    0x00000000000252a6      0xae9 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_mmap.o)
- .debug_line    0x0000000000025d8f      0xb06 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x0000000000026895     0x115f /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
- .debug_line    0x00000000000279f4     0x1c2b /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
- .debug_line    0x000000000002961f      0x11b /home/david/EC444/EC444_Quest1/servo_v0/build/xtensa-debug-module/libxtensa-debug-module.a(eri.o)
- .debug_line    0x000000000002973a      0x6b7 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
- .debug_line    0x0000000000029df1      0x4a8 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
- .debug_line    0x000000000002a299      0x4c5 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
- .debug_line    0x000000000002a75e      0x3a5 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
- .debug_line    0x000000000002ab03      0x11d /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
- .debug_line    0x000000000002ac20       0xff /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
- .debug_line    0x000000000002ad1f      0x1dc /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdi3.o)
- .debug_line    0x000000000002aefb      0x1fe /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_moddi3.o)
- .debug_line    0x000000000002b0f9      0x18e /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .debug_line    0x000000000002b287      0x1db /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
- .debug_line    0x000000000002b462      0xb07 /home/david/EC444/EC444_Quest1/servo_v0/build/app_update/libapp_update.a(esp_ota_ops.o)
- .debug_line    0x000000000002bf69      0xa47 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x000000000002c9b0      0x39b /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_line    0x000000000002cd4b      0x3b2 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x000000000002d0fd     0x26f4 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
- .debug_line    0x000000000002f7f1      0x4b6 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
- .debug_line    0x000000000002fca7     0x1154 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
- .debug_line    0x0000000000030dfb      0x9bd /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(timer.o)
- .debug_line    0x00000000000317b8     0x14e1 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
- .debug_line    0x0000000000032c99     0x1d6d /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
- .debug_line    0x0000000000034a06     0x305f /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
- .debug_line    0x0000000000037a65       0x92 /home/david/esp/esp-idf/components/esp32/libhal.a(clock.o)
- .debug_line    0x0000000000037af7      0x2ef /home/david/esp/esp-idf/components/esp32/libhal.a(windowspill_asm.o)
- .debug_line    0x0000000000037de6       0x50 /home/david/esp/esp-idf/components/esp32/libhal.a(interrupts--intlevel.o)
- .debug_line    0x0000000000037e36       0x66 /home/david/esp/esp-idf/components/esp32/libhal.a(state_asm--restore_extra_nw.o)
- .debug_line    0x0000000000037e9c       0x66 /home/david/esp/esp-idf/components/esp32/libhal.a(state_asm--save_extra_nw.o)
- .debug_line    0x0000000000037f02     0x1548 /home/david/EC444/EC444_Quest1/servo_v0/build/freertos/libfreertos.a(ringbuf.o)
- .debug_line    0x000000000003944a      0x700 /home/david/EC444/EC444_Quest1/servo_v0/build/mbedtls/libmbedtls.a(sha256.o)
- .debug_line    0x0000000000039b4a       0xd5 /home/david/EC444/EC444_Quest1/servo_v0/build/mbedtls/libmbedtls.a(platform_util.o)
- .debug_line    0x0000000000039c1f       0xcc /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
- .debug_line    0x0000000000039ceb      0x129 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_periph.o)
- .debug_line    0x0000000000039e14       0xe7 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(gpio_periph.o)
- .debug_line    0x0000000000039efb      0x7fd /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
- .debug_line    0x000000000003a6f8      0x12f /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divsf3.o)
- .debug_line    0x000000000003a827      0x18f /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatdidf.o)
- .debug_line    0x000000000003a9b6      0x67b /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_line    0x000000000003b031      0x313 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x000000000003b344      0x4be /home/david/EC444/EC444_Quest1/servo_v0/build/wpa_supplicant/libwpa_supplicant.a(md5-internal.o)
+ .debug_line    0x000000000000fc51      0x952 /home/david/EC444/EC444_Quest1/servo_v0/build/main/libmain.a(i2c_example_main.o)
+ .debug_line    0x00000000000105a3      0x150 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+ .debug_line    0x00000000000106f3      0x13f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-clock.o)
+ .debug_line    0x0000000000010832      0x25c /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+ .debug_line    0x0000000000010a8e      0x2d6 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
+ .debug_line    0x0000000000010d64      0x301 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
+ .debug_line    0x0000000000011065      0x216 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
+ .debug_line    0x000000000001127b      0x5e6 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
+ .debug_line    0x0000000000011861      0x2b0 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
+ .debug_line    0x0000000000011b11      0x250 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
+ .debug_line    0x0000000000011d61      0x2dc /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
+ .debug_line    0x000000000001203d      0x2ec /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
+ .debug_line    0x0000000000012329      0x315 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
+ .debug_line    0x000000000001263e      0x2c7 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
+ .debug_line    0x0000000000012905     0x2e07 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+ .debug_line    0x000000000001570c     0x2539 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_line    0x0000000000017c45     0x2fc4 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+ .debug_line    0x000000000001ac09      0x275 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
+ .debug_line    0x000000000001ae7e      0x1d7 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-xpg_strerror_r.o)
+ .debug_line    0x000000000001b055      0xfde /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+ .debug_line    0x000000000001c033      0x234 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
+ .debug_line    0x000000000001c267      0xdbc /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
+ .debug_line    0x000000000001d023      0x2e1 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
+ .debug_line    0x000000000001d304      0x1e6 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
+ .debug_line    0x000000000001d4ea      0x5e3 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-strerror.o)
+ .debug_line    0x000000000001dacd     0x244f /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_line    0x000000000001ff1c       0x60 /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-u_strerr.o)
+ .debug_line    0x000000000001ff7c      0x179 /home/david/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
+ .debug_line    0x00000000000200f5      0x7e6 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(time.o)
+ .debug_line    0x00000000000208db      0x14e /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(reent_init.o)
+ .debug_line    0x0000000000020a29      0x281 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscalls.o)
+ .debug_line    0x0000000000020caa      0x229 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(syscall_table.o)
+ .debug_line    0x0000000000020ed3      0x3c6 /home/david/EC444/EC444_Quest1/servo_v0/build/newlib/libnewlib.a(locks.o)
+ .debug_line    0x0000000000021299      0xb94 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread.o)
+ .debug_line    0x0000000000021e2d      0x4b3 /home/david/EC444/EC444_Quest1/servo_v0/build/pthread/libpthread.a(pthread_local_storage.o)
+ .debug_line    0x00000000000222e0      0x178 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(cpu_util.o)
+ .debug_line    0x0000000000022458      0x42c /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_wdt.o)
+ .debug_line    0x0000000000022884      0x18b /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(soc_memory_layout.o)
+ .debug_line    0x0000000000022a0f      0x3fd /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_init.o)
+ .debug_line    0x0000000000022e0c      0x3c8 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x00000000000231d4      0xd02 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x0000000000023ed6      0x476 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(memory_layout_utils.o)
+ .debug_line    0x000000000002434c      0x564 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(cache_utils.o)
+ .debug_line    0x00000000000248b0      0x9f2 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_ops.o)
+ .debug_line    0x00000000000252a2      0xae9 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(flash_mmap.o)
+ .debug_line    0x0000000000025d8b      0xb06 /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x0000000000026891     0x115f /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs_uart.o)
+ .debug_line    0x00000000000279f0     0x1c2b /home/david/EC444/EC444_Quest1/servo_v0/build/vfs/libvfs.a(vfs.o)
+ .debug_line    0x000000000002961b      0x11b /home/david/EC444/EC444_Quest1/servo_v0/build/xtensa-debug-module/libxtensa-debug-module.a(eri.o)
+ .debug_line    0x0000000000029736      0x6b7 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
+ .debug_line    0x0000000000029ded      0x4a8 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
+ .debug_line    0x000000000002a295      0x4c5 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
+ .debug_line    0x000000000002a75a      0x3a5 /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
+ .debug_line    0x000000000002aaff      0x11d /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
+ .debug_line    0x000000000002ac1c       0xff /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
+ .debug_line    0x000000000002ad1b      0x1dc /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdi3.o)
+ .debug_line    0x000000000002aef7      0x1fe /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_moddi3.o)
+ .debug_line    0x000000000002b0f5      0x18e /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_line    0x000000000002b283      0x1db /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
+ .debug_line    0x000000000002b45e      0xb07 /home/david/EC444/EC444_Quest1/servo_v0/build/app_update/libapp_update.a(esp_ota_ops.o)
+ .debug_line    0x000000000002bf65      0xa47 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x000000000002c9ac      0x39b /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x000000000002cd47      0x3b2 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x000000000002d0f9     0x26f4 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(uart.o)
+ .debug_line    0x000000000002f7ed      0x4b6 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(periph_ctrl.o)
+ .debug_line    0x000000000002fca3     0x1154 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(gpio.o)
+ .debug_line    0x0000000000030df7      0x9bd /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(timer.o)
+ .debug_line    0x00000000000317b4     0x14e1 /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(mcpwm.o)
+ .debug_line    0x0000000000032c95     0x1d6d /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(i2c.o)
+ .debug_line    0x0000000000034a02     0x305f /home/david/EC444/EC444_Quest1/servo_v0/build/driver/libdriver.a(rtc_module.o)
+ .debug_line    0x0000000000037a61       0x92 /home/david/esp/esp-idf/components/esp32/libhal.a(clock.o)
+ .debug_line    0x0000000000037af3      0x2ef /home/david/esp/esp-idf/components/esp32/libhal.a(windowspill_asm.o)
+ .debug_line    0x0000000000037de2       0x50 /home/david/esp/esp-idf/components/esp32/libhal.a(interrupts--intlevel.o)
+ .debug_line    0x0000000000037e32       0x66 /home/david/esp/esp-idf/components/esp32/libhal.a(state_asm--restore_extra_nw.o)
+ .debug_line    0x0000000000037e98       0x66 /home/david/esp/esp-idf/components/esp32/libhal.a(state_asm--save_extra_nw.o)
+ .debug_line    0x0000000000037efe     0x1548 /home/david/EC444/EC444_Quest1/servo_v0/build/freertos/libfreertos.a(ringbuf.o)
+ .debug_line    0x0000000000039446      0x700 /home/david/EC444/EC444_Quest1/servo_v0/build/mbedtls/libmbedtls.a(sha256.o)
+ .debug_line    0x0000000000039b46       0xd5 /home/david/EC444/EC444_Quest1/servo_v0/build/mbedtls/libmbedtls.a(platform_util.o)
+ .debug_line    0x0000000000039c1b       0xcc /home/david/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
+ .debug_line    0x0000000000039ce7      0x129 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(rtc_periph.o)
+ .debug_line    0x0000000000039e10       0xe7 /home/david/EC444/EC444_Quest1/servo_v0/build/soc/libsoc.a(gpio_periph.o)
+ .debug_line    0x0000000000039ef7      0x7fd /home/david/EC444/EC444_Quest1/servo_v0/build/spi_flash/libspi_flash.a(partition.o)
+ .debug_line    0x000000000003a6f4      0x12f /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divsf3.o)
+ .debug_line    0x000000000003a823      0x18f /home/david/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatdidf.o)
+ .debug_line    0x000000000003a9b2      0x67b /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_line    0x000000000003b02d      0x313 /home/david/EC444/EC444_Quest1/servo_v0/build/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x000000000003b340      0x4be /home/david/EC444/EC444_Quest1/servo_v0/build/wpa_supplicant/libwpa_supplicant.a(md5-internal.o)
 
 .debug_str      0x0000000000000000    0x15ddf
  .debug_str     0x0000000000000000     0x237b /home/david/EC444/EC444_Quest1/servo_v0/build/cxx/libcxx.a(cxx_guards.o)

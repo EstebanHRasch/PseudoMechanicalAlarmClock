@@ -478,6 +478,8 @@ void mcpwm_example_servo_control(void *arg)
         }
 
 		j = 0;
+        anglecount = (strtime.tm_sec * 2);
+        anglecount2 = (strtime.tm_min * 2);
         for (count = 0; count < SERVO_MAX_DEGREE; count++) {
             //printf("Angle of rotation: %d\n", count);
             angle = servo_per_degree_init(count);
