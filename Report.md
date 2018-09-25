@@ -6,11 +6,10 @@
 
 ### Date: 2018-09-25
 
-#### Summary: 
+### Summary: 
 
 **Quest 1: Pseudo-Mechanical Alarm Clock Report**
 
-The repository containing all of the code and documentation for this project can be found at https://github.com/EstebanHernandez1/EC444_Quest1.
 
 **Assignment**
 
@@ -30,11 +29,58 @@ The servo component of our project is the backbone of the clock, because they ar
 
 Our group was able to successfully implement the required objectives from Quest 1. The user can input digits to be read by the program, displayed onto the servos, and flashed to the alphanumeric display. The clock can be reset and set to a new time at any moment when the clock is operational and keeps time precisely. An alarm can be set, and will trigger when the time has been reached by flashing two separate LEDs.  The ESP32 successfully starts the alphanumeric display and writes digits to it using the I2C protocol. The servos component is what drives the clock.  By incrementing the time struct, we built every second. The program creates an internal clock which we used to tell what angle the hours/minutes servos should be at representing the actual/set time. This cycle repeats until the program is terminated.
 
-#### Sketches and Photos:
-<img src= "https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/first_alpha_build.JPG" width="40%" alt="First alphanumeric build"> 
+**Summary**
+
+**Evaluation Criteria**
+We decided on the following specifications for a successful solution to this quest:
+
+* Two servos indicate current time in minutes and seconds
+* User can set an alarm which triggers when current time reaches the set alarm time
+* Alphanumeric Display shows current time
+* Components stay updated under changes made by the user
+
+**Solution Design**
+
+We used a Adafruit HUZZAH32 - ESP32 Feather board, two J-Deal SG90 Micro Servo Motors, and a Adafruit 0.56" 4-Digit 14-Segment Display w/ FeatherWing Combo Pack. The pins used for the clock are:
+
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+
+### Sketches and Photos:
+
+<div class="row">
+  <div class="column">
+    <img src= "https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/first_alpha_build.JPG" width="40%" alt="First alphanumeric build"> 
+  </div>
+  <div class="column">
+    <img src= "https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/missing_alpha.JPG" width="40%" alt="Missing Alphanumeric Display"> 
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <img src= "https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/v0_esp_alpha.JPG" width="40%" alt="Final Version: Alphanumeric"> 
+  </div>
+  <div class="column">
+    <img src= "https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/v0_esp_leds.JPG" width="40%" alt="Final Version: LEDs"> 
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <img src= "https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/v0_esp_servo.JPG" width="40%" alt="Final Version: Servos"> 
+  </div>
+  <div class="column">
+    <img src= "https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/initial_plan.JPG" width="40%" alt="Initial Plan"> 
+  </div>
+</div>
 
 
-#### Modules, Tools, Source Used in Solution
+### Modules, Tools, Source Used in Solution
 (1) https://learn.adafruit.com/adafruit-huzzah32-esp32-feather/using-with-arduino-ide <br/>
 (2) https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html <br/>
 (3) https://github.com/espressif/arduino-esp32/issues/333 <br/>
@@ -45,8 +91,11 @@ Our group was able to successfully implement the required objectives from Quest 
 (8) http://whizzer.bu.edu/team-quests/primary/pseudo-clock <br/>
 (9) http://whizzer.bu.edu/individual-assignments/2-single-micro/gpio-drive-leds <br/>
 (10) https://en.wikipedia.org/wiki/C_date_and_time_functions <br/>
+(11) https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet <br/>
+(12) https://learn.adafruit.com/14-segment-alpha-numeric-led-featherwing/pinouts <br/>
 
+### Supporting Artifacts:
+The repository containing all of the code and documentation for this project can be found at https://github.com/EstebanHernandez1/EC444_Quest1.
 
-#### Supporting Artifacts:
-
+The video recorded can be found here at 
 
