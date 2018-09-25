@@ -31,7 +31,7 @@ The servo component of our project is the backbone of the clock, because they ar
 Our group was able to successfully implement the required objectives from Quest 1. The user can input digits to be read by the program, displayed onto the servos, and flashed to the alphanumeric display. The clock can be reset and set to a new time at any moment when the clock is operational and keeps time precisely. An alarm can be set, and will trigger when the time has been reached by flashing two separate LEDs.  The ESP32 successfully starts the alphanumeric display and writes digits to it using the I2C protocol. The servos component is what drives the clock.  By incrementing the time struct, we built every second. The program creates an internal clock which we used to tell what angle the hours/minutes servos should be at representing the actual/set time. This cycle repeats until the program is terminated.
 
 #### Sketches and Photos:
-![alt text](https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/first_alpha_build.JPG "Logo Initial Alphanumeric Setup")
+<img src= "https://github.com/EstebanHernandez1/EC444_Quest1/blob/master/first_alpha_build.JPG" width="40%" alt="First alphanumeric build"> 
 
 
 #### Modules, Tools, Source Used in Solution
