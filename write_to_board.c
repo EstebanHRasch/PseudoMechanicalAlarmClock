@@ -175,7 +175,7 @@ static esp_err_t i2c_set_blink(i2c_port_t i2c_num, uint8_t* data_wr)
     return ret;
 }
 
-static esp_err_t write(i2c_port_t i2c_num, uint16_t* data_wr)
+static esp_err_t write(i2c_port_t i2c_num, uint16_t * data_wr)
 {
 
     // *** This creates a structure (class) called cmd
@@ -186,14 +186,14 @@ static esp_err_t write(i2c_port_t i2c_num, uint16_t* data_wr)
     i2c_master_write_byte(cmd, ( ESP_SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
     // *** Add the commmand payload you want to send to device
       i2c_master_write_byte(cmd, 0x00, ACK_CHECK_EN);
-      i2c_master_write_byte(cmd, *data_wr & 0xFF, ACK_CHECK_EN);
-      i2c_master_write_byte(cmd, *data_wr >> 8, ACK_CHECK_EN);
-      i2c_master_write_byte(cmd, *data_wr & 0xFF, ACK_CHECK_EN);
-      i2c_master_write_byte(cmd, *data_wr>> 8, ACK_CHECK_EN);
-      i2c_master_write_byte(cmd, *data_wr & 0xFF, ACK_CHECK_EN);
-      i2c_master_write_byte(cmd, *data_wr>> 8, ACK_CHECK_EN);
-      i2c_master_write_byte(cmd, *data_wr & 0xFF, ACK_CHECK_EN);
-      i2c_master_write_byte(cmd, *data_wr>> 8, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[0] & 0xFF, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[0] >> 8, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[1] & 0xFF, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[1] >> 8, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[2] & 0xFF, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[2] >> 8, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[3] & 0xFF, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[3] >> 8, ACK_CHECK_EN);
 
     // i2c_master_write_byte(cmd, 0x81, ACK_CHECK_EN);
     // i2c_master_write_byte(cmd, 0x3F, ACK_CHECK_EN);
@@ -395,9 +395,8 @@ static void i2c_example_master_init()
 // }
 
 // *** This code won't work until you set the defines correctly !! ***
-static void test(){
-  int ret;
-
+static void run(int digits[]){
+  uint16_t nums[] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};
   uint8_t osc = 0x21;
   uint8_t* osc_addr = &osc;
   uint8_t brightness = 0xEF;
@@ -407,8 +406,8 @@ static void test(){
   i2c_write_oscillator(I2C_EXAMPLE_MASTER_NUM, osc_addr);
   i2c_set_brightness(I2C_EXAMPLE_MASTER_NUM, brightness_addr);
   i2c_set_blink(I2C_EXAMPLE_MASTER_NUM, blink_addr);
-  uint16_t displaybuffer = 0b0000010100110110;
-  uint16_t * displaybuffer_addr = &displaybuffer;
+  uint16_t displaybuffer[] = {nums[digits[0]], nums[digits[1]], nums[digits[2]], nums[digits[3]]};
+  uint16_t * displaybuffer_addr = displaybuffer;
 
   write(I2C_EXAMPLE_MASTER_NUM, displaybuffer_addr);
   // uint8_t data3 = 0x3F;
@@ -432,8 +431,9 @@ void app_main()
 {
     // print_mux = xSemaphoreCreateMutex();
     //i2c_example_slave_init();
+    int digits[] = {1,2,3,4};
     i2c_example_master_init();
-    test();
+    run(digits);
     // xTaskCreate(i2c_test_task, "i2c_test_task_0", 1024 * 2, (void* ) 0, 10, NULL);
     // xTaskCreate(i2c_test_task, "i2c_test_task_1", 1024 * 2, (void* ) 1, 10, NULL);
 
