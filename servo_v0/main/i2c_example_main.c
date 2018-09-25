@@ -20,6 +20,8 @@
 #include "driver/uart.h"
 #include "driver/gpio.h"
 #include "sdkconfig.h"
+
+#include "driver/i2c.h"
  
 #define LEN 150
 
@@ -28,7 +30,7 @@
 #define SERVO_MAX_PULSEWIDTH 2000 //Maximum pulse width in microsecond
 #define SERVO_MAX_DEGREE 102 //Maximum angle in degree upto which servo can rotate
 #define SERVO_MAX_DEGREE2 120
-#define SERVO_MAX_DEGREE3 60
+#define SERVO_MAX_DEGREE3 120
 
 #define BUF_SIZE (8192)
 
@@ -39,6 +41,175 @@
 
 #define BLINK_GPIO 12            // PIN A10 - LSB - 12 on the board
 #define BLINK_GPIO2 27          // Pin A12 - 27 on the board (right of 12)
+
+
+// Definitions for Alphanumeric Display
+#define DATA_LENGTH                        512              /*!<Data buffer length for test buffer*/
+#define RW_TEST_LENGTH                     129              /*!<Data length for r/w test, any value from 0-DATA_LENGTH*/
+#define DELAY_TIME_BETWEEN_ITEMS_MS        1234             /*!< delay time between different test items */
+
+#define I2C_EXAMPLE_SLAVE_SCL_IO           22               /*!<gpio number for i2c slave clock  */
+#define I2C_EXAMPLE_SLAVE_SDA_IO           23               /*!<gpio number for i2c slave data */
+#define I2C_EXAMPLE_SLAVE_NUM              I2C_NUM_0        /*!<I2C port number for slave dev */
+#define I2C_EXAMPLE_SLAVE_TX_BUF_LEN       (2*DATA_LENGTH)  /*!<I2C slave tx buffer size */
+#define I2C_EXAMPLE_SLAVE_RX_BUF_LEN       (2*DATA_LENGTH)  /*!<I2C slave rx buffer size */
+
+#define I2C_EXAMPLE_MASTER_SCL_IO          22               /*!< gpio number for I2C master clock */
+#define I2C_EXAMPLE_MASTER_SDA_IO          23               /*!< gpio number for I2C master data  */
+#define I2C_EXAMPLE_MASTER_NUM             I2C_NUM_1        /*!< I2C port number for master dev */
+#define I2C_EXAMPLE_MASTER_TX_BUF_DISABLE  0                /*!< I2C master do not need buffer */
+#define I2C_EXAMPLE_MASTER_RX_BUF_DISABLE  0                /*!< I2C master do not need buffer */
+#define I2C_EXAMPLE_MASTER_FREQ_HZ         100000           /*!< I2C master clock frequency */
+
+#define BH1750_SENSOR_ADDR                 0x70             /*!< slave address for BH1750 sensor */
+#define BH1750_CMD_START                   0x23             /*!< Command to set measure mode */
+#define ESP_SLAVE_ADDR                     0x70             /*!< ESP32 slave address, you can set any 7bit value */
+#define WRITE_BIT                          I2C_MASTER_WRITE /*!< I2C master write */
+#define READ_BIT                           I2C_MASTER_READ  /*!< I2C master read */
+#define ACK_CHECK_EN                       0x1              /*!< I2C master will check ack from slave*/
+#define ACK_CHECK_DIS                      0x0              /*!< I2C master will not check ack from slave */
+#define ACK_VAL                            0x0              /*!< I2C ack value */
+#define NACK_VAL                           0x1              /*!< I2C nack value */
+
+static esp_err_t i2c_write_oscillator(i2c_port_t i2c_num, uint8_t* data_wr)
+{
+    // *** This creates a structure (class) called cmd
+    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+    // *** adds the i2c start bit into cmd
+    i2c_master_start(cmd);
+    // *** This adds the alpha i2c driver address to cmd
+    i2c_master_write_byte(cmd, ( ESP_SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+    // *** Add the commmand payload you want to send to device
+    i2c_master_write_byte(cmd, 0x21, ACK_CHECK_EN);
+    // *** adds the i2c stop bit to cmd
+    i2c_master_stop(cmd);
+    // *** This command is what puts the cmd payload onto the i2c bus
+    esp_err_t ret = i2c_master_cmd_begin(i2c_num, cmd, 1000 / portTICK_RATE_MS);
+    i2c_cmd_link_delete(cmd);
+    return ret;
+}
+
+static esp_err_t i2c_set_brightness(i2c_port_t i2c_num, uint8_t* data_wr)
+{
+    // *** This creates a structure (class) called cmd
+    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+    // *** adds the i2c start bit into cmd
+    i2c_master_start(cmd);
+    // *** This adds the alpha i2c driver address to cmd
+    i2c_master_write_byte(cmd, ( ESP_SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+    // *** Add the commmand payload you want to send to device
+    i2c_master_write_byte(cmd, *data_wr, ACK_CHECK_EN);
+    // *** adds the i2c stop bit to cmd
+    i2c_master_stop(cmd);
+    // *** This command is what puts the cmd payload onto the i2c bus
+    esp_err_t ret = i2c_master_cmd_begin(i2c_num, cmd, 1000 / portTICK_RATE_MS);
+    i2c_cmd_link_delete(cmd);
+    return ret;
+}
+
+static esp_err_t i2c_set_blink(i2c_port_t i2c_num, uint8_t* data_wr)
+{
+    // *** This creates a structure (class) called cmd
+    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+    // *** adds the i2c start bit into cmd
+    i2c_master_start(cmd);
+    // *** This adds the alpha i2c driver address to cmd
+    i2c_master_write_byte(cmd, ( ESP_SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+    // *** Add the commmand payload you want to send to device
+    i2c_master_write_byte(cmd, *data_wr, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x81, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x3F, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x30, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x00, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x38, ACK_CHECK_EN);
+    // *** adds the i2c stop bit to cmd
+    i2c_master_stop(cmd);
+    // *** This command is what puts the cmd payload onto the i2c bus
+    esp_err_t ret = i2c_master_cmd_begin(i2c_num, cmd, 1000 / portTICK_RATE_MS);
+    i2c_cmd_link_delete(cmd);
+    return ret;
+}
+
+static esp_err_t write(i2c_port_t i2c_num, uint16_t * data_wr)
+{
+
+    // *** This creates a structure (class) called cmd
+    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+    // *** adds the i2c start bit into cmd
+    i2c_master_start(cmd);
+    // *** This adds the alpha i2c driver address to cmd
+    i2c_master_write_byte(cmd, ( ESP_SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
+    // *** Add the commmand payload you want to send to device
+      i2c_master_write_byte(cmd, 0x00, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[0] & 0xFF, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[0] >> 8, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[1] & 0xFF, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[1] >> 8, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[2] & 0xFF, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[2] >> 8, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[3] & 0xFF, ACK_CHECK_EN);
+      i2c_master_write_byte(cmd, data_wr[3] >> 8, ACK_CHECK_EN);
+
+    // i2c_master_write_byte(cmd, 0x81, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x3F, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x30, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x00, ACK_CHECK_EN);
+    // i2c_master_write_byte(cmd, 0x38, ACK_CHECK_EN)
+    // *** adds the i2c stop bit to cmd
+    i2c_master_stop(cmd);
+    // *** This command is what puts the cmd payload onto the i2c bus
+    esp_err_t ret = i2c_master_cmd_begin(i2c_num, cmd, 1000 / portTICK_RATE_MS);
+    i2c_cmd_link_delete(cmd);
+    return ret;
+}
+
+static void i2c_example_master_init()
+{
+    int i2c_master_port = I2C_EXAMPLE_MASTER_NUM;
+    i2c_config_t conf;
+    conf.mode = I2C_MODE_MASTER;
+    conf.sda_io_num = I2C_EXAMPLE_MASTER_SDA_IO;
+    conf.sda_pullup_en = GPIO_PULLUP_ENABLE;
+    conf.scl_io_num = I2C_EXAMPLE_MASTER_SCL_IO;
+    conf.scl_pullup_en = GPIO_PULLUP_ENABLE;
+    conf.master.clk_speed = I2C_EXAMPLE_MASTER_FREQ_HZ;
+    i2c_param_config(i2c_master_port, &conf);
+    i2c_driver_install(i2c_master_port, conf.mode,
+                       I2C_EXAMPLE_MASTER_RX_BUF_DISABLE,
+                       I2C_EXAMPLE_MASTER_TX_BUF_DISABLE, 0);
+    i2c_set_data_mode(i2c_master_port, I2C_DATA_MODE_MSB_FIRST, I2C_DATA_MODE_MSB_FIRST);
+}
+
+// *** This code won't work until you set the defines correctly !! ***
+static void run(int digits[]){
+  uint16_t nums[] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};
+  uint8_t osc = 0x21;
+  uint8_t* osc_addr = &osc;
+  uint8_t brightness = 0xEF;
+  uint8_t* brightness_addr = &brightness;
+  uint8_t blink = 0x81;
+  uint8_t* blink_addr = &blink;
+  i2c_write_oscillator(I2C_EXAMPLE_MASTER_NUM, osc_addr);
+  i2c_set_brightness(I2C_EXAMPLE_MASTER_NUM, brightness_addr);
+  i2c_set_blink(I2C_EXAMPLE_MASTER_NUM, blink_addr);
+  uint16_t displaybuffer[] = {nums[digits[0]], nums[digits[1]], nums[digits[2]], nums[digits[3]]};
+  uint16_t * displaybuffer_addr = displaybuffer;
+
+  write(I2C_EXAMPLE_MASTER_NUM, displaybuffer_addr);
+  // uint8_t data3 = 0x3F;
+  // uint8_t* data_addr3 = &data3;
+  // i2c_set_blink(I2C_EXAMPLE_MASTER_NUM, data_addr3);
+  // uint8_t data4 = 0x3F;
+  // uint8_t* data_addr4 = &data4;
+  // i2c_set_blink(I2C_EXAMPLE_MASTER_NUM, data_addr4);
+  // Now send real commands to the display
+  // 1. Send a command to turn on the display oscillator
+  // 2. Send a command to set the blink rate or to not blink
+  // 3. Send a command to turn the brightness
+  // 4. Finally, send a command with bitmap to display a character
+  // 5. Have dinner
+  // The command values are described on the website or datasheet
+}
 
 static void mcpwm_example_gpio_initialize()
 {
@@ -140,7 +311,11 @@ void mcpwm_example_servo_control(void *arg)
     int len = 0;
     int counter = 0;
 	
-	
+    // Initial Values on the Alphanumeric board display 1234
+	//int digits[] = {1,2,3,4};
+    i2c_example_master_init();
+    run(input);
+
     while(counter != 4) {
         // Read data from the UART        
         len = uart_read_bytes(UART_NUM_0, data, BUF_SIZE, 20 / portTICK_RATE_MS);
@@ -158,13 +333,15 @@ void mcpwm_example_servo_control(void *arg)
         printf("%d", input[p]);
     }
     printf("\n");
-    // esp_restart();
-
+    
     struct tm strtime;
     time_t timeoftheday;
 
     // Initialize the alarm time for the clock
     int alarm_array[4] = {9, 9, 9, 9};
+
+    // Array alphanumeric display is looking at
+    int alpha_display[4] = {0, 0, 0, 0};
  
     strtime.tm_year = 2018-1900;
     strtime.tm_mon = 8;
@@ -222,7 +399,6 @@ void mcpwm_example_servo_control(void *arg)
             // Pressing s will initiate the "Set time" functionality
             // Servos will stop and will change to the new inputed time
             if(dep == 's') {
-                int input_set[4] = {0, 0, 0, 0};
                 int len_set = 0;
                 int counter_set = 0;
                 while(counter_set != 4) {
@@ -232,20 +408,18 @@ void mcpwm_example_servo_control(void *arg)
                         // Write the data to the buffer
                         uart_write_bytes(UART_NUM_0, (const char *) data, len_set);
                         // Store the correct int into the array
-                        input_set[counter_set] = (int) *data - '0';
+                        input[counter_set] = (int) *data - '0';
                         counter_set = counter_set + 1;
                     }
                 }
-                strtime.tm_hour = input_set[0] * 10 + input_set[1];
-                strtime.tm_min = input_set[2] * 10 + input_set[3];
+                strtime.tm_hour = input[0] * 10 + input[1];
+                strtime.tm_min = input[2] * 10 + input[3];
                 strtime.tm_sec = 0;
 				anglecount = 0;
 				anglecount2 = 0; 
 				maxdegree2 = (SERVO_MAX_DEGREE2 - (strtime.tm_sec * 2));
-				maxdegree3 = (SERVO_MAX_DEGREE3 - strtime.tm_min);
-				
-				
-				}
+				maxdegree3 = (SERVO_MAX_DEGREE3 - strtime.tm_min);			
+            }
 
             if(dep == 'a') {
                 double start_t, end_t, total_t;
@@ -339,6 +513,14 @@ void mcpwm_example_servo_control(void *arg)
         minute_counter = minute_counter + 1;
 		timeoftheday = mktime(&strtime);
 	    printf(ctime(&timeoftheday));
+
+        int a = strtime.tm_hour / 10;
+        int b = strtime.tm_hour % 10;
+        int c = strtime.tm_min / 10;
+        int d = strtime.tm_min % 10;
+        // alpha_display = {strtime.tm_hour / 10, strtime.tm_hour % 10, strtime.tm_min / 10, strtime.tm_min % 10};
+        int lsc[4] = {a, b, c, d};
+        run(lsc);
     }
 }
 
