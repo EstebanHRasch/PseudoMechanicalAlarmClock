@@ -1,5 +1,5 @@
-/* servo motor control example
-   This example code is in the Public Domain (or CC0 licensed, at your option.)
+/* 
+   This example is in the Public Domain (or CC0 licensed, at your option.)
    Unless required by applicable law or agreed to in writing, this
    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
    CONDITIONS OF ANY KIND, either express or implied.
@@ -43,26 +43,13 @@
 #define BLINK_GPIO2 27                      // Pin A12 - 27 on the board (right of 12)
 
 
-// Definitions for Alphanumeric Display
-#define DATA_LENGTH                        512              /*!<Data buffer length for test buffer*/
-#define RW_TEST_LENGTH                     129              /*!<Data length for r/w test, any value from 0-DATA_LENGTH*/
-#define DELAY_TIME_BETWEEN_ITEMS_MS        1234             /*!< delay time between different test items */
-
-#define I2C_EXAMPLE_SLAVE_SCL_IO           22               /*!<gpio number for i2c slave clock  */
-#define I2C_EXAMPLE_SLAVE_SDA_IO           23               /*!<gpio number for i2c slave data */
-#define I2C_EXAMPLE_SLAVE_NUM              I2C_NUM_0        /*!<I2C port number for slave dev */
-#define I2C_EXAMPLE_SLAVE_TX_BUF_LEN       (2*DATA_LENGTH)  /*!<I2C slave tx buffer size */
-#define I2C_EXAMPLE_SLAVE_RX_BUF_LEN       (2*DATA_LENGTH)  /*!<I2C slave rx buffer size */
-
+// Definitions for Alphanumeric Display: constants necessary to write from master (ESP32) to slave (display).
 #define I2C_EXAMPLE_MASTER_SCL_IO          22               /*!< gpio number for I2C master clock */
 #define I2C_EXAMPLE_MASTER_SDA_IO          23               /*!< gpio number for I2C master data  */
 #define I2C_EXAMPLE_MASTER_NUM             I2C_NUM_1        /*!< I2C port number for master dev */
 #define I2C_EXAMPLE_MASTER_TX_BUF_DISABLE  0                /*!< I2C master do not need buffer */
 #define I2C_EXAMPLE_MASTER_RX_BUF_DISABLE  0                /*!< I2C master do not need buffer */
 #define I2C_EXAMPLE_MASTER_FREQ_HZ         100000           /*!< I2C master clock frequency */
-
-#define BH1750_SENSOR_ADDR                 0x70             /*!< slave address for BH1750 sensor */
-#define BH1750_CMD_START                   0x23             /*!< Command to set measure mode */
 #define ESP_SLAVE_ADDR                     0x70             /*!< ESP32 slave address, you can set any 7bit value */
 #define WRITE_BIT                          I2C_MASTER_WRITE /*!< I2C master write */
 #define READ_BIT                           I2C_MASTER_READ  /*!< I2C master read */
@@ -71,6 +58,7 @@
 #define ACK_VAL                            0x0              /*!< I2C ack value */
 #define NACK_VAL                           0x1              /*!< I2C nack value */
 
+//This function sends an i2c command that starts the oscillator on the alphanumeric display.
 static esp_err_t i2c_write_oscillator(i2c_port_t i2c_num, uint8_t* data_wr)
 {
     // *** This creates a structure (class) called cmd
@@ -89,6 +77,7 @@ static esp_err_t i2c_write_oscillator(i2c_port_t i2c_num, uint8_t* data_wr)
     return ret;
 }
 
+//This function sends and i2c sets the brightness on the display (changes from default of 0).
 static esp_err_t i2c_set_brightness(i2c_port_t i2c_num, uint8_t* data_wr)
 {
     // *** This creates a structure (class) called cmd
@@ -107,6 +96,7 @@ static esp_err_t i2c_set_brightness(i2c_port_t i2c_num, uint8_t* data_wr)
     return ret;
 }
 
+//This function starts the display and sets its blink rate (not blinking in this case).
 static esp_err_t i2c_set_blink(i2c_port_t i2c_num, uint8_t* data_wr)
 {
     // *** This creates a structure (class) called cmd
@@ -117,11 +107,6 @@ static esp_err_t i2c_set_blink(i2c_port_t i2c_num, uint8_t* data_wr)
     i2c_master_write_byte(cmd, ( ESP_SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
     // *** Add the commmand payload you want to send to device
     i2c_master_write_byte(cmd, *data_wr, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x81, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x3F, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x30, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x00, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x38, ACK_CHECK_EN);
     // *** adds the i2c stop bit to cmd
     i2c_master_stop(cmd);
     // *** This command is what puts the cmd payload onto the i2c bus
@@ -130,9 +115,16 @@ static esp_err_t i2c_set_blink(i2c_port_t i2c_num, uint8_t* data_wr)
     return ret;
 }
 
+/*
+	This function takes an array of the binary representations of four digits to write
+	to the alphanumeric display.  It individually adds each character to the command
+	and then bit shifts the previous characters in the command to the right to allow
+	new characters to be written.  After the four characters are written, it sends the
+	command to the display.  This function is called every time the display updates.
+	
+*/
 static esp_err_t write(i2c_port_t i2c_num, uint16_t * data_wr)
 {
-
     // *** This creates a structure (class) called cmd
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     // *** adds the i2c start bit into cmd
@@ -150,11 +142,6 @@ static esp_err_t write(i2c_port_t i2c_num, uint16_t * data_wr)
     i2c_master_write_byte(cmd, data_wr[3] & 0xFF, ACK_CHECK_EN);
     i2c_master_write_byte(cmd, data_wr[3] >> 8, ACK_CHECK_EN);
 
-    // i2c_master_write_byte(cmd, 0x81, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x3F, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x30, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x00, ACK_CHECK_EN);
-    // i2c_master_write_byte(cmd, 0x38, ACK_CHECK_EN)
     // *** adds the i2c stop bit to cmd
     i2c_master_stop(cmd);
     // *** This command is what puts the cmd payload onto the i2c bus
@@ -162,6 +149,12 @@ static esp_err_t write(i2c_port_t i2c_num, uint16_t * data_wr)
     i2c_cmd_link_delete(cmd);
     return ret;
 }
+
+/*
+	This function configures the ESP32 board to act as a master in i2c
+	communication with the alphanumeric display.  The configuration is
+	set using the properties defined above.
+*/
 
 static void i2c_example_master_init()
 {
@@ -180,7 +173,15 @@ static void i2c_example_master_init()
     i2c_set_data_mode(i2c_master_port, I2C_DATA_MODE_MSB_FIRST, I2C_DATA_MODE_MSB_FIRST);
 }
 
-// *** This code won't work until you set the defines correctly !! ***
+/*
+	This function defines the values necessary to initiate and write to the
+	alphanumeric display, and then calls the write function with the digits
+	to be written.  First, it defines the oscillator, brightness,
+	and blink commands and sends them through their respective startup functions.
+	Next, it replaces the integers to be displayed with the binary representations
+	of those digits using the nums array.  Finally, it calls the write function
+	with the four characters to be displayed.
+*/
 static void run(int digits[]){
   uint16_t nums[] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};
   uint8_t osc = 0x21;
@@ -194,21 +195,7 @@ static void run(int digits[]){
   i2c_set_blink(I2C_EXAMPLE_MASTER_NUM, blink_addr);
   uint16_t displaybuffer[] = {nums[digits[0]], nums[digits[1]], nums[digits[2]], nums[digits[3]]};
   uint16_t * displaybuffer_addr = displaybuffer;
-
   write(I2C_EXAMPLE_MASTER_NUM, displaybuffer_addr);
-  // uint8_t data3 = 0x3F;
-  // uint8_t* data_addr3 = &data3;
-  // i2c_set_blink(I2C_EXAMPLE_MASTER_NUM, data_addr3);
-  // uint8_t data4 = 0x3F;
-  // uint8_t* data_addr4 = &data4;
-  // i2c_set_blink(I2C_EXAMPLE_MASTER_NUM, data_addr4);
-  // Now send real commands to the display
-  // 1. Send a command to turn on the display oscillator
-  // 2. Send a command to set the blink rate or to not blink
-  // 3. Send a command to turn the brightness
-  // 4. Finally, send a command with bitmap to display a character
-  // 5. Have dinner
-  // The command values are described on the website or datasheet
 }
 
 // Initialize the GPIO pins to pair with a specific servo
